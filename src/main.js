@@ -159,19 +159,19 @@ const Warriors = {
     ],
     GEAR: [{
       NAME: `CTS`,
-      OBTAINED: `2020.04.18`,
+      OBTAINED: `2020.04.20`,
     },
     {
       NAME: `LFC`,
-      OBTAINED: `2020.02.15`,
+      OBTAINED: `2020.02.26`,
     },
     {
       NAME: `ACC`,
-      OBTAINED: `2020.01.01`,
+      OBTAINED: `2019.10.23`,
     },
     {
       NAME: `SM`,
-      OBTAINED: `2020.01.01`,
+      OBTAINED: `2020.01.02`,
     },
     ],
     PERSONAL_MOD: 0.9, // based on warcraftlogs perfomance - the better you do the less coeff is
@@ -195,19 +195,23 @@ const Warriors = {
     ],
     GEAR: [{
       NAME: `CAF`,
-      OBTAINED: `2020.02.01`,
+      OBTAINED: `2020.02.23`, // not sure - was pug so no RC history
     },
     {
       NAME: `OG`,
-      OBTAINED: `2020.01.01`,
+      OBTAINED: `2019.12.11`,
     },
     {
       NAME: `QSR`,
-      OBTAINED: `2020.01.01`,
+      OBTAINED: `2020.03.02`,
     },
     {
       NAME: `VIS`,
-      OBTAINED: `2020.01.01`,
+      OBTAINED: `2020.01.06`,
+    },
+    {
+      NAME: `DB`,
+      OBTAINED: `2019.11.11`,
     },
     ],
     PERSONAL_MOD: 1.4, // based on warcraftlogs perfomance - the better you do the less coeff is
@@ -220,11 +224,11 @@ const Warriors = {
     ],
     GEAR: [{
       NAME: `VIS`,
-      OBTAINED: `2020.02.01`,
+      OBTAINED: `2019.10.01`,
     },
     {
       NAME: `CRUL`,
-      OBTAINED: `2020.01.01`,
+      OBTAINED: `2019.10.01`,
     },
     ],
     PERSONAL_MOD: 1.4, // based on warcraftlogs perfomance - the better you do the less coeff is
@@ -237,15 +241,15 @@ const Warriors = {
     ],
     GEAR: [{
       NAME: `DTP`,
-      OBTAINED: `2020.02.01`,
+      OBTAINED: `2019.10.01`,
     },
     {
       NAME: `OG`,
-      OBTAINED: `2020.01.01`,
+      OBTAINED: `2020.03.30`,
     },
     {
       NAME: `LFC`,
-      OBTAINED: `2020.01.01`,
+      OBTAINED: `2020.04.01`,
     },
     {
       NAME: `CB`,
@@ -253,27 +257,27 @@ const Warriors = {
     },
     {
       NAME: `WS`,
-      OBTAINED: `2020.01.01`,
+      OBTAINED: `2019.10.01`,
     },
     {
       NAME: `FG`,
-      OBTAINED: `2020.01.01`,
+      OBTAINED: `2019.10.01`,
     },
     {
       NAME: `QSR`,
-      OBTAINED: `2020.01.01`,
+      OBTAINED: `2020.04.06`,
     },
     {
       NAME: `VIS`,
-      OBTAINED: `2020.01.01`,
+      OBTAINED: `2019.10.01`,
     },
     {
       NAME: `BB`,
-      OBTAINED: `2020.01.01`,
+      OBTAINED: `2019.10.01`,
     },
     {
       NAME: `SM`,
-      OBTAINED: `2020.01.01`,
+      OBTAINED: `2019.10.01`,
     },
     ],
     PERSONAL_MOD: 0.6, // based on warcraftlogs perfomance - the better you do the less coeff is
@@ -286,35 +290,35 @@ const Warriors = {
     ],
     GEAR: [{
       NAME: `DTP`,
-      OBTAINED: `2020.02.01`,
+      OBTAINED: `2020.03.25`,
     },
     {
       NAME: `OG`,
-      OBTAINED: `2020.01.01`,
+      OBTAINED: `2019.10.01`,
     },
     {
       NAME: `WS`,
-      OBTAINED: `2020.01.01`,
+      OBTAINED: `2019.10.01`,
     },
     {
       NAME: `QSR`,
-      OBTAINED: `2020.01.01`,
+      OBTAINED: `2020.04.27`,
     },
     {
       NAME: `CAF`,
-      OBTAINED: `2020.02.01`,
+      OBTAINED: `2020.04.08`,
     },
     {
       NAME: `DB`,
-      OBTAINED: `2020.01.01`,
+      OBTAINED: `2020.02.27`,
     },
     {
       NAME: `PB`,
-      OBTAINED: `2020.01.01`,
+      OBTAINED: `2019.10.01`,
     },
     {
       NAME: `SM`,
-      OBTAINED: `2020.01.01`,
+      OBTAINED: `2020.03.12`,
     },
     ],
     PERSONAL_MOD: 1.4, // based on warcraftlogs perfomance - the better you do the less coeff is
@@ -327,31 +331,39 @@ const Warriors = {
     ],
     GEAR: [{
       NAME: `OG`,
-      OBTAINED: `2020.01.01`,
+      OBTAINED: `2020.03.02`,
     },
     {
       NAME: `CB`,
-      OBTAINED: `2020.04.22`,
+      OBTAINED: `2020.02.27`,
     },
     {
       NAME: `QSR`,
-      OBTAINED: `2020.01.01`,
+      OBTAINED: `2020.02.20`,
     },
     {
       NAME: `DB`,
-      OBTAINED: `2020.01.01`,
+      OBTAINED: `2019.10.01`,
+    },
+    {
+      NAME: `FG`,
+      OBTAINED: `2020.03.02`,
     },
     {
       NAME: `PB`,
-      OBTAINED: `2020.01.01`,
+      OBTAINED: `2020.04.06`,
     },
     {
       NAME: `SM`,
-      OBTAINED: `2020.01.01`,
+      OBTAINED: `2019.11.27`,
     },
     {
       NAME: `CRUL`,
-      OBTAINED: `2020.01.01`,
+      OBTAINED: `2020.02.27`,
+    },
+    {
+      NAME: `WS`,
+      OBTAINED: `2020.01.22`,
     },
     ],
     PERSONAL_MOD: 1.4, // based on warcraftlogs perfomance - the better you do the less coeff is
@@ -364,35 +376,35 @@ const Warriors = {
     ],
     GEAR: [{
       NAME: `OG`,
-      OBTAINED: `2020.01.01`,
+      OBTAINED: `2019.10.01`,
     },
     {
       NAME: `LFC`,
-      OBTAINED: `2020.04.22`,
+      OBTAINED: `2019.10.01`,
     },
     {
       NAME: `QSR`,
-      OBTAINED: `2020.01.01`,
+      OBTAINED: `2020.04.27`,
     },
     {
       NAME: `CB`,
-      OBTAINED: `2020.01.01`,
+      OBTAINED: `2019.10.01`,
     },
     {
       NAME: `WS`,
-      OBTAINED: `2020.01.01`,
+      OBTAINED: `2019.10.01`,
     },
     {
       NAME: `BL`,
-      OBTAINED: `2020.01.01`,
+      OBTAINED: `2019.10.01`,
     },
     {
       NAME: `DB`,
-      OBTAINED: `2020.01.01`,
+      OBTAINED: `2019.10.01`,
     },
     {
       NAME: `CHT`,
-      OBTAINED: `2020.01.01`,
+      OBTAINED: `2019.10.01`,
     },
     {
       NAME: `DFT`,
@@ -409,39 +421,44 @@ const Warriors = {
     ],
     GEAR: [{
       NAME: `DTP`,
-      OBTAINED: `2020.01.01`,
+      OBTAINED: `2020.03.04`,
     },
     {
       NAME: `WS`,
-      OBTAINED: `2020.01.01`,
+      OBTAINED: `2019.12.11`,
     },
     {
       NAME: `FG`,
-      OBTAINED: `2020.04.22`,
+      OBTAINED: `2019.12.18`,
     },
     {
       NAME: `OG`,
-      OBTAINED: `2020.01.01`,
+      OBTAINED: `2020.01.22`,
     },
     {
       NAME: `QSR`,
-      OBTAINED: `2020.01.01`,
+      OBTAINED: `2020.01.02`,
     },
     {
       NAME: `DFT`,
       OBTAINED: `2020.01.01`,
     },
     {
+      NAME: `SM`,
+      OBTAINED: `2020.01.22`,
+    },
+    {
       NAME: `VIS`,
-      OBTAINED: `2020.01.01`,
+      OBTAINED: `2019.12.16`,
     },
     {
       NAME: `BB`,
-      OBTAINED: `2020.01.01`,
+      OBTAINED: `2020.02.13`,
     },
     ],
     PERSONAL_MOD: 0.5, // based on warcraftlogs perfomance - the better you do the less coeff is
   },
+  // TODO Add tanks to the list
 
 
   TargetDummy: {
@@ -486,7 +503,10 @@ const getGearScore = (warrior) => {
 };
 
 const getGearMarkup = (warrior) => {
-  return warrior.GEAR.map((it) => `<li class="warrior__gearitem"><a href="${Gear[it.NAME].LINK}"></a></li>`).join(`\n`);
+  return warrior.GEAR.slice()
+    .sort((a, b) => getDaysPassed(a.OBTAINED) - getDaysPassed(b.OBTAINED))
+    .map((it) => `<li class="warrior__gearitem"><a href="${Gear[it.NAME].LINK}"></a> ${getDaysPassed(it.OBTAINED)} day(s) ago</li>`)
+    .join(`\n`);
 };
 
 const getWarriorTemplate = (warrior, number) => {
