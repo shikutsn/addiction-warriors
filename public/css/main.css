@@ -43,7 +43,7 @@ html {
 
 body {
   box-sizing: border-box;
-  max-width: 1240px;
+  max-width: 1600px;
   padding: var(--vertical-gap) var(--horizontal-gap) 0;
   width: 100%;
 }
@@ -1095,7 +1095,7 @@ button {
   list-style: none;
   padding: 0;
   margin: 0;
-  max-height: 100px;
+  max-height: 160px;
   /* width: 300px; */
   display: flex;
   flex-wrap: wrap;
@@ -1103,10 +1103,20 @@ button {
 }
 
 .warrior__gearitem {
-  padding: 0 20px 0 0;
+  padding: 0 20px 5px 0;
+}
+
+.warrior__data--name {
+  font-size: 20px;
+  color: #ffff00;
+}
+
+.warrior__data--gearscore {
+  color: #ff0000;
 }
 
 .warrior__data {
   display: block;
+  padding-bottom: 10px;
   width: 100%;
 }

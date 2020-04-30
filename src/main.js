@@ -441,7 +441,7 @@ const Warriors = {
     },
     {
       NAME: `DFT`,
-      OBTAINED: `2020.01.01`,
+      OBTAINED: `2020.02.13`,
     },
     {
       NAME: `SM`,
@@ -519,8 +519,9 @@ const getWarriorTemplate = (warrior, number) => {
 
   return (`<article class="warrior">
     <div class="warrior__caption-container">
-      <span class="warrior__data warrior__data--name">${number}) ${warrior.NAME} - ${warrior.RANK}</span>
-      <span class="warrior__data warrior__data--gearscore">Gear Score: ${gearScore}</span>
+      <span class="warrior__data warrior__data--name">${number}) ${warrior.NAME}</span>
+      <span class="warrior__data warrior__data--rank">${warrior.RANK}</span>
+      <span class="warrior__data">Gear Score: <span class="warrior__data--gearscore"${gearScore}</span></span>
       <span class="warrior__data warrior__data--gearsum">GearSum: ${gearSum}</span>
       <span class="warrior__data warrior__data--scoremod">ScoreMod: ${scoreMod}</span>
     </div>
@@ -532,19 +533,40 @@ const getWarriorTemplate = (warrior, number) => {
 
 const containerElement = document.querySelector(`.warriors-list`);
 
+let sortedWarriorsRaiders = [];
+let sortedWarriorsTrials = [];
+let sortedWarriorsTanks = [];
+
+// makes new array with added gear scores to be able to sort it
 for (let index in Warriors) {
   if (Warriors.hasOwnProperty(index)) {
-    const warriorElement = createElement(getWarriorTemplate(Warriors[index], getRandomNumber(1, 10)));
-    containerElement.append(warriorElement);
+    // prepares new and updated entry
+    const newWarrior = Object.assign({}, Warriors[index], {
+      GEAR_SUM: getGearSum(Warriors[index]),
+      SCORE_MOD: getScoreMod(Warriors[index]),
+      GEAR_SCORE: getGearScore(Warriors[index]),
+    });
 
-    // debug
-    // const gearSum = getGearSum(Warriors[index]);
-    // const scoreMod = getScoreMod(Warriors[index]);
-    // const gearScore = gearSum * scoreMod;
-    // console.log(`\nGearScore of ${Warriors[index].NAME}: ${gearSum}`);
-    // console.log(`Total Modifier of ${Warriors[index].NAME}: ${scoreMod}`);
-    // console.log(`Final GearScore of ${Warriors[index].NAME}: ${gearScore}`);
+    if (Warriors[index].RANK === `Raider`) {
+      sortedWarriorsRaiders.push(newWarrior);
+    } else if (Warriors[index].RANK === `Trial`) {
+      sortedWarriorsTrials.push(newWarrior);
+    } else if (Warriors[index].RANK === `Tank`) {
+      sortedWarriorsTanks.push(newWarrior);
+    }
   }
 }
 
-// console.log(getDaysPassed(`2020.04.23`));
+// lets now actually sort it and add to html
+// TODO refactor this
+sortedWarriorsRaiders.sort((a, b) => getGearScore(a) - getGearScore(b));
+sortedWarriorsRaiders.forEach((it, i) => {
+  const warriorElement = createElement(getWarriorTemplate(it, i + 1));
+  containerElement.append(warriorElement);
+});
+sortedWarriorsTrials.sort((a, b) => getGearScore(a) - getGearScore(b));
+sortedWarriorsTrials.forEach((it, i) => {
+  const warriorElement = createElement(getWarriorTemplate(it, i + 1));
+  containerElement.append(warriorElement);
+});
+// TODO add active penalties as well as penalties history
