@@ -1075,3 +1075,38 @@ button {
   padding-top: 50px;
   padding-bottom: 50px;
 }
+
+.warriors-list {
+  font-size: 16px;
+}
+
+.warrior__caption-container {
+  width: 220px;
+}
+
+.warrior {
+  padding-bottom: 30px;
+  display: flex;
+  /* margin-bottom: 50px;
+  position: relative; */
+}
+
+.warrior__gear {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 100px;
+  /* width: 300px; */
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.warrior__gearitem {
+  padding: 0 20px 0 0;
+}
+
+.warrior__data {
+  display: block;
+  width: 100%;
+}

@@ -1,4 +1,5 @@
-import {getDaysPassed} from "./utils/common.js";
+import {getDaysPassed, getRandomNumber} from "./utils/common.js";
+import {createElement} from "./utils/render.js";
 
 // TODO Actually need to think what to do with gearScore of newcomers. Specially if they are blue, cause once they become raiders they'll be first in line to get anything.
 const Gear = {
@@ -474,24 +475,55 @@ const getScoreMod = (warrior) => {
 
   // debug
   console.log(`GEAR:`);
-  warrior.GEAR.slice().map((it) => console.log(`${Gear[it.NAME].NAME} cost(s) ${Gear[it.NAME].SCORE}`));
+  warrior.GEAR.map((it) => console.log(`${Gear[it.NAME].NAME} cost(s) ${Gear[it.NAME].SCORE}`));
+  warrior.PENALTIES.map((it) => console.log(`${it.REASON} for ${it.DURATION} day(s) with mod ${it.VALUE} on ${it.ASSIGNED}`));
 
-  return targetMod;
+  return Math.round(targetMod * 1000) / 1000;
 };
 
 const getGearScore = (warrior) => {
-  return getGearSum(warrior) * getScoreMod(warrior);
+  return Math.round(getGearSum(warrior) * getScoreMod(warrior));
 };
+
+const getGearMarkup = (warrior) => {
+  return warrior.GEAR.map((it) => `<li class="warrior__gearitem"><a href="${Gear[it.NAME].LINK}"></a></li>`).join(`\n`);
+};
+
+const getWarriorTemplate = (warrior, number) => {
+  // generates html template for warrior with number
+  // TODO add sorting by slot (one more map which describes what items go into what slot)
+  const gearSum = getGearSum(warrior);
+  const scoreMod = getScoreMod(warrior);
+  const gearScore = getGearScore(warrior);
+  const gearMarkup = getGearMarkup(warrior);
+
+  return (`<article class="warrior">
+    <div class="warrior__caption-container">
+      <span class="warrior__data warrior__data--name">${number}) ${warrior.NAME} - ${warrior.RANK}</span>
+      <span class="warrior__data warrior__data--gearscore">Gear Score: ${gearScore}</span>
+      <span class="warrior__data warrior__data--gearsum">GearSum: ${gearSum}</span>
+      <span class="warrior__data warrior__data--scoremod">ScoreMod: ${scoreMod}</span>
+    </div>
+    <ul class="warrior__gear">
+      ${gearMarkup}
+    </ul>
+  </article>`);
+};
+
+const containerElement = document.querySelector(`.warriors-list`);
 
 for (let index in Warriors) {
   if (Warriors.hasOwnProperty(index)) {
+    const warriorElement = createElement(getWarriorTemplate(Warriors[index], getRandomNumber(1, 10)));
+    containerElement.append(warriorElement);
+
     // debug
-    const gearSum = getGearSum(Warriors[index]);
-    const scoreMod = getScoreMod(Warriors[index]);
-    const gearScore = gearSum * scoreMod;
-    console.log(`\nGearScore of ${Warriors[index].NAME}: ${gearSum}`);
-    console.log(`Total Modifier of ${Warriors[index].NAME}: ${scoreMod}`);
-    console.log(`Final GearScore of ${Warriors[index].NAME}: ${gearScore}`);
+    // const gearSum = getGearSum(Warriors[index]);
+    // const scoreMod = getScoreMod(Warriors[index]);
+    // const gearScore = gearSum * scoreMod;
+    // console.log(`\nGearScore of ${Warriors[index].NAME}: ${gearSum}`);
+    // console.log(`Total Modifier of ${Warriors[index].NAME}: ${scoreMod}`);
+    // console.log(`Final GearScore of ${Warriors[index].NAME}: ${gearScore}`);
   }
 }
 
