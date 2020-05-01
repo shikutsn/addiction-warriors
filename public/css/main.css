@@ -1114,7 +1114,7 @@ button {
 
 .warrior__data--name {
   font-size: 20px;
-  color: #ffff00;
+  color: #C79C6E;
 }
 
 .warrior__data--gearscore {
@@ -1167,8 +1167,20 @@ button {
 
 .important-loot-list__container {
   display: flex;
+  border-right: solid 2px #31353f;
+  margin-right: 15px;
 }
 
 .important-loot-list__warrior-name {
-  color: #ffff00;
+  color: #C79C6E;
+}
+
+.important-loot-list__rogue-name {
+  color: #FFF569;
+}
+
+.important-loot-list__dft-warriors,
+.important-loot-list__cts-warriors {
+  margin-right: 15px;
+  border-right: solid 2px #31353f;
 }

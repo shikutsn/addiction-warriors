@@ -162,7 +162,7 @@ const getOwnersTemplate = (dft, cts) => {
     return arr
       .slice()
       .sort((a, b) => getDaysPassed(a.OBTAINED) - getDaysPassed(b.OBTAINED))
-      .map((it) => `<li><span class="important-loot-list__warrior-name">${it.NAME}</span> at ${it.OBTAINED}, ${getDaysPassed(it.OBTAINED)} day(s) ago</li>`)
+      .map((it) => `<li><span class="important-loot-list__${it.CLASS}-name">${it.NAME}</span> at ${it.OBTAINED}, ${getDaysPassed(it.OBTAINED)} day(s) ago</li>`)
       .join(`\n`);
   };
 
