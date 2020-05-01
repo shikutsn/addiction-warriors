@@ -74,8 +74,10 @@ button {
 }
 
 .header__logo {
-  margin-right: 68px;
-  flex-basis: 165px;
+  /* margin-right: 68px; */
+  /* flex-basis: 165px; */
+  padding-left: 53px;
+  width: 100%;
   flex-grow: 0;
   flex-shrink: 0;
 }
@@ -1078,6 +1080,7 @@ button {
 
 .warriors-list {
   font-size: 16px;
+  margin-top: 20px;
 }
 
 .warrior__caption-container {
@@ -1096,7 +1099,7 @@ button {
   padding: 0;
   margin: 0;
   max-height: 160px;
-  /* width: 300px; */
+  width: 800px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -1119,4 +1122,10 @@ button {
   display: block;
   padding-bottom: 10px;
   width: 100%;
+}
+
+.warriors__type-choser {
+  display: block;
+  padding: 0 10px;
+  font-size: 20px;
 }

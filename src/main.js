@@ -1,7 +1,16 @@
 import {getDaysPassed, getRandomNumber} from "./utils/common.js";
 import {createElement} from "./utils/render.js";
 
+// TODO publish it on github.io? so that everyone could check it
+
 // TODO Actually need to think what to do with gearScore of newcomers. Specially if they are blue, cause once they become raiders they'll be first in line to get anything.
+
+// General guidelines:
+// Amongst those who want an item one with the least Gear Rating usually gets it. I reserve right to sometimes override it based on different unpredictable factors
+// I value weapons and irreplacable items (such as DFT or chromatic boots or onslaught girdle) quite high
+// Also, to prevent ppl just mindlessly needing on everything there is a "price" even if you get something for offspec
+// that includes stuff like two handed weapons but doesnt include pure tanking oriented gear (sets, shields, trinkets etc)
+// based on warcraftlogs performance every individual gets some modifier to his overall gear rating. The better that individual performs the less it becomes making your final gear rating less therefore making you to likely get an item
 const Gear = {
   // BWL
   SS: {
@@ -491,9 +500,9 @@ const getScoreMod = (warrior) => {
   targetMod = targetMod * warrior.PERSONAL_MOD;
 
   // debug
-  console.log(`GEAR:`);
-  warrior.GEAR.map((it) => console.log(`${Gear[it.NAME].NAME} cost(s) ${Gear[it.NAME].SCORE}`));
-  warrior.PENALTIES.map((it) => console.log(`${it.REASON} for ${it.DURATION} day(s) with mod ${it.VALUE} on ${it.ASSIGNED}`));
+  // console.log(`GEAR:`);
+  // warrior.GEAR.map((it) => console.log(`${Gear[it.NAME].NAME} cost(s) ${Gear[it.NAME].SCORE}`));
+  // warrior.PENALTIES.map((it) => console.log(`${it.REASON} for ${it.DURATION} day(s) with mod ${it.VALUE} on ${it.ASSIGNED}`));
 
   return Math.round(targetMod * 1000) / 1000;
 };
@@ -521,7 +530,7 @@ const getWarriorTemplate = (warrior, number) => {
     <div class="warrior__caption-container">
       <span class="warrior__data warrior__data--name">${number}) ${warrior.NAME}</span>
       <span class="warrior__data warrior__data--rank">${warrior.RANK}</span>
-      <span class="warrior__data">Gear Score: <span class="warrior__data--gearscore"${gearScore}</span></span>
+      <span class="warrior__data">Gear Score: <span class="warrior__data--gearscore">${gearScore}</span></span>
       <span class="warrior__data warrior__data--gearsum">GearSum: ${gearSum}</span>
       <span class="warrior__data warrior__data--scoremod">ScoreMod: ${scoreMod}</span>
     </div>
@@ -529,6 +538,15 @@ const getWarriorTemplate = (warrior, number) => {
       ${gearMarkup}
     </ul>
   </article>`);
+};
+
+const renderWarriors = (warriorsArray) => {
+  // containerElement.innerHTML = ``;
+
+  warriorsArray.forEach((it, i) => {
+    const warriorElement = createElement(getWarriorTemplate(it, i + 1));
+    containerElement.append(warriorElement);
+  });
 };
 
 const containerElement = document.querySelector(`.warriors-list`);
@@ -557,16 +575,35 @@ for (let index in Warriors) {
   }
 }
 
+
 // lets now actually sort it and add to html
 // TODO refactor this
 sortedWarriorsRaiders.sort((a, b) => getGearScore(a) - getGearScore(b));
-sortedWarriorsRaiders.forEach((it, i) => {
-  const warriorElement = createElement(getWarriorTemplate(it, i + 1));
-  containerElement.append(warriorElement);
-});
 sortedWarriorsTrials.sort((a, b) => getGearScore(a) - getGearScore(b));
-sortedWarriorsTrials.forEach((it, i) => {
-  const warriorElement = createElement(getWarriorTemplate(it, i + 1));
-  containerElement.append(warriorElement);
-});
+sortedWarriorsTanks.sort((a, b) => getGearScore(a) - getGearScore(b));
+let sortedWarriors = [].concat(sortedWarriorsTanks, sortedWarriorsTrials, sortedWarriorsRaiders);
+sortedWarriors.sort((a, b) => getGearScore(a) - getGearScore(b));
+renderWarriors(sortedWarriors);
+// renderWarriors(sortedWarriorsRaiders);
+// renderWarriors(sortedWarriorsTrials);
+// renderWarriors(sortedWarriorsTanks);
+
+// sortedWarriorsTrials.sort((a, b) => getGearScore(a) - getGearScore(b));
+// sortedWarriorsTrials.forEach((it, i) => {
+//   const warriorElement = createElement(getWarriorTemplate(it, i + 1));
+//   containerElement.append(warriorElement);
+// });
 // TODO add active penalties as well as penalties history
+
+// TODO doesnt work yet cuz wowhead links dont get updated
+// const selectWarriorTypeElement = document.querySelector(`.warriors__type-choser`);
+// selectWarriorTypeElement.addEventListener(`click`, (evt) => {
+//   const selectedOption = evt.target.selectedOptions[0].label;
+//   if (selectedOption === `Raider`) {
+//     renderWarriors(sortedWarriorsRaiders);
+//   } else if (selectedOption === `Trial`) {
+//     renderWarriors(sortedWarriorsTrials);
+//   } else if (selectedOption === `Tank`) {
+//     renderWarriors(sortedWarriorsTanks);
+//   }
+// });
