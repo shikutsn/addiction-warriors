@@ -138,7 +138,7 @@ const Warriors = {
       OBTAINED: `2019.10.01`,
     },
     ],
-    PERSONAL_MOD: 0.6, // based on warcraftlogs perfomance - the better you do the less coeff is
+    PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
   },
 
   Ilith: {
@@ -275,7 +275,30 @@ const Warriors = {
   Brooks: {
     NAME: `Brooks`,
     RANK: `Raider`,
-    PENALTIES: [
+    PENALTIES: [{
+      REASON: `no world buffs DUMMY`,
+      ASSIGNED: `2020.04.25`,
+      DURATION: 7, // days
+      VALUE: 1.3, // multiplier to final GearScore
+    },
+    {
+      REASON: `DUMMY`,
+      ASSIGNED: `2020.04.26`,
+      DURATION: 7, // days
+      VALUE: 1.4, // multiplier to final GearScore
+    },
+    {
+      REASON: `Y - DUMMY`,
+      ASSIGNED: `2020.04.28`,
+      DURATION: 7, // days
+      VALUE: 1.6, // multiplier to final GearScore
+    },
+    {
+      REASON: `being cunt NOT DUMMY =D`,
+      ASSIGNED: `2020.04.25`,
+      DURATION: 5, // days
+      VALUE: 1.5, // multiplier to final GearScore
+    },
     ],
     GEAR: [{
       NAME: `DTP`,
