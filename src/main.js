@@ -1,5 +1,7 @@
 import {getDaysPassed, getRandomNumber} from "./utils/common.js";
 import {createElement} from "./utils/render.js";
+import {Gear} from "./data/loot-base.js";
+import {Warriors} from "./data/warriors.js";
 
 // TODO publish it on github.io? so that everyone could check it
 
@@ -11,479 +13,19 @@ import {createElement} from "./utils/render.js";
 // Also, to prevent ppl just mindlessly needing on everything there is a "price" even if you get something for offspec
 // that includes stuff like two handed weapons but doesnt include pure tanking oriented gear (sets, shields, trinkets etc)
 // based on warcraftlogs performance every individual gets some modifier to his overall gear rating. The better that individual performs the less it becomes making your final gear rating less therefore making you to likely get an item
-const Gear = {
-  // BWL
-  SS: {
-    NAME: `Spineshatter`,
-    LINK: `https://classic.wowhead.com/item=19335/spineshatter`,
-    SCORE: 20,
-  },
-  MALA: {
-    NAME: `Maladath, Runed Blade of the Black Flight`,
-    LINK: `https://classic.wowhead.com/item=19351/maladath-runed-blade-of-the-black-flight`,
-    SCORE: 40,
-  },
-  ASHK: {
-    NAME: `Ashkandi, Greatsword of the Brotherhood`,
-    LINK: `https://classic.wowhead.com/item=19364/ashkandi-greatsword-of-the-brotherhood`,
-    SCORE: 10,
-  },
-  CRUL: {
-    NAME: `Crul'shorukh, Edge of Chaos`,
-    LINK: `https://classic.wowhead.com/item=19363/crulshorukh-edge-of-chaos`,
-    SCORE: 20,
-  },
-  CF: {
-    NAME: `Cloak of Firemaw`,
-    LINK: `https://classic.wowhead.com/item=19398/cloak-of-firemaw`,
-    SCORE: 15,
-  },
-  CTS: {
-    NAME: `Chromatically Tempered Sword`,
-    LINK: `https://classic.wowhead.com/item=19352/chromatically-tempered-sword`,
-    SCORE: 100,
-  },
-  DFT: {
-    NAME: `Drake Fang Talisman`,
-    LINK: `https://classic.wowhead.com/item=19406/drake-fang-talisman`,
-    SCORE: 95,
-  },
-  DTP: {
-    NAME: `Drake Talon Pauldrons`,
-    LINK: `https://classic.wowhead.com/item=19394/drake-talon-pauldrons`,
-    SCORE: 50,
-  },
-  LFC: {
-    NAME: `Legguards of the Fallen Crusader`,
-    LINK: `https://classic.wowhead.com/item=19402/legguards-of-the-fallen-crusader`,
-    SCORE: 50,
-  },
-  CB: {
-    NAME: `Chromatic Boots`,
-    LINK: `https://classic.wowhead.com/item=19387/chromatic-boots`,
-    SCORE: 70,
-  },
-  CDM: {
-    NAME: `Cloak of Draconic Might`,
-    LINK: `https://classic.wowhead.com/item=19436/cloak-of-draconic-might`,
-    SCORE: 40,
-  },
-  CAF: {
-    NAME: `Circle of Applied Force`,
-    LINK: `https://classic.wowhead.com/item=19432/circle-of-applied-force`,
-    SCORE: 30,
-  },
-  // TODO fill MC/Ony gear
-  VIS: {
-    NAME: `Vis'kag the Bloodletter`,
-    LINK: `https://classic.wowhead.com/item=17075/viskag-the-bloodletter`,
-    SCORE: 60,
-  },
-  BB: {
-    NAME: `Brutality Blade`,
-    LINK: `https://classic.wowhead.com/item=18832/brutality-blade`,
-    SCORE: 45,
-  },
-  SM: {
-    NAME: `Striker's Mark`,
-    LINK: `https://classic.wowhead.com/item=17069/strikers-mark`,
-    SCORE: 25,
-  },
-  BL: {
-    NAME: `Blastershot Launcher`,
-    LINK: `https://classic.wowhead.com/item=17072/blastershot-launcher`,
-    SCORE: 10,
-  },
-  WS: {
-    NAME: `Wristguards of Stability`,
-    LINK: `https://classic.wowhead.com/item=19146/wristguards-of-stability`,
-    SCORE: 15,
-  },
-  FG: {
-    NAME: `Flameguard Gauntlets`,
-    LINK: `https://classic.wowhead.com/item=19143/flameguard-gauntlets`,
-    SCORE: 35,
-  },
-  OG: {
-    NAME: `Onslaught Girdle`,
-    LINK: `https://classic.wowhead.com/item=19137/onslaught-girdle`,
-    SCORE: 60,
-  },
-  QSR: {
-    NAME: `Quick Strike Ring`,
-    LINK: `https://classic.wowhead.com/item=18821/quick-strike-ring`,
-    SCORE: 45,
-  },
-  ACC: {
-    NAME: `Band of Accuria`,
-    LINK: `https://classic.wowhead.com/item=17063/band-of-accuria`,
-    SCORE: 40,
-  },
-  DB: {
-    NAME: `Deathbringer`,
-    LINK: `https://classic.wowhead.com/item=17068/deathbringer`,
-    SCORE: 35,
-  },
-  PB: {
-    NAME: `Perdition's Blade`,
-    LINK: `https://classic.wowhead.com/item=18816/perditions-blade`,
-    SCORE: 25,
-  },
-  CHT: {
-    NAME: `Core Hound Tooth`,
-    LINK: `https://classic.wowhead.com/item=18805/core-hound-tooth`,
-    SCORE: 20,
-  },
-  DUMMY: {
-    NAME: ``,
-    LINK: ``,
-    SCORE: 0,
-  },
-  // TODO check that values of offhands are about the same.
-  // TODO BRE, SPINAL REAPER?
-};
+// then you get 2 weeks long increase to your gear rating after looting something. Value of it depends on quality of item you looted (?)
+// should probably add increasing gear rating buff if you didnt get items for a while. Lets say 0.95**(noLootWeeksCouns)
 
 const GearMods = {
   // modifiers after you got something
   DURATION: 14, // how long it lasts
-  MOD: 1.2, // mod to final gear score
+  MOD: 1.2, // mod to final gear
 };
 
-const Warriors = {
-  Sintrix: {
-    NAME: `Sintrix`,
-    RANK: `Raider`,
-    PENALTIES: [{
-      REASON: `no world buffs DUMMY`,
-      ASSIGNED: `2020.04.25`,
-      DURATION: 15, // days
-      VALUE: 1.0, // multiplier to final GearScore
-    },
-    {
-      REASON: `being cunt NOT DUMMY =D`,
-      ASSIGNED: `2020.03.25`,
-      DURATION: 45, // days
-      VALUE: 1.5, // multiplier to final GearScore
-    },
-    ],
-    GEAR: [{
-      NAME: `CTS`,
-      OBTAINED: `2020.04.20`,
-    },
-    {
-      NAME: `LFC`,
-      OBTAINED: `2020.02.26`,
-    },
-    {
-      NAME: `ACC`,
-      OBTAINED: `2019.10.23`,
-    },
-    {
-      NAME: `SM`,
-      OBTAINED: `2020.01.02`,
-    },
-    ],
-    PERSONAL_MOD: 0.9, // based on warcraftlogs perfomance - the better you do the less coeff is
-  },
-
-  Peoplekiller: {
-    NAME: `Peoplekiller`,
-    RANK: `Raider`,
-    PENALTIES: [{
-      REASON: `no world buffs- DUMMY`,
-      ASSIGNED: `2020.03.21`,
-      DURATION: 10, // days
-      VALUE: 1.0, // multiplier to final GearScore
-    },
-    {
-      REASON: `being laggy DUMMY`,
-      ASSIGNED: `2020.04.12`,
-      DURATION: 15, // days
-      VALUE: 1.0, // multiplier to final GearScore
-    },
-    ],
-    GEAR: [{
-      NAME: `CAF`,
-      OBTAINED: `2020.02.23`, // not sure - was pug so no RC history
-    },
-    {
-      NAME: `OG`,
-      OBTAINED: `2019.12.11`,
-    },
-    {
-      NAME: `QSR`,
-      OBTAINED: `2020.03.02`,
-    },
-    {
-      NAME: `VIS`,
-      OBTAINED: `2020.01.06`,
-    },
-    {
-      NAME: `DB`,
-      OBTAINED: `2019.11.11`,
-    },
-    ],
-    PERSONAL_MOD: 1.4, // based on warcraftlogs perfomance - the better you do the less coeff is
-  },
-
-  Exet: {
-    NAME: `Exet`,
-    RANK: `Trial`,
-    PENALTIES: [
-    ],
-    GEAR: [{
-      NAME: `VIS`,
-      OBTAINED: `2019.10.01`,
-    },
-    {
-      NAME: `CRUL`,
-      OBTAINED: `2019.10.01`,
-    },
-    ],
-    PERSONAL_MOD: 1.4, // based on warcraftlogs perfomance - the better you do the less coeff is
-  },
-
-  Elitekoala: {
-    NAME: `Elitekoala`,
-    RANK: `Raider`,
-    PENALTIES: [
-    ],
-    GEAR: [{
-      NAME: `DTP`,
-      OBTAINED: `2019.10.01`,
-    },
-    {
-      NAME: `OG`,
-      OBTAINED: `2020.03.30`,
-    },
-    {
-      NAME: `LFC`,
-      OBTAINED: `2020.04.01`,
-    },
-    {
-      NAME: `CB`,
-      OBTAINED: `2020.04.22`,
-    },
-    {
-      NAME: `WS`,
-      OBTAINED: `2019.10.01`,
-    },
-    {
-      NAME: `FG`,
-      OBTAINED: `2019.10.01`,
-    },
-    {
-      NAME: `QSR`,
-      OBTAINED: `2020.04.06`,
-    },
-    {
-      NAME: `VIS`,
-      OBTAINED: `2019.10.01`,
-    },
-    {
-      NAME: `BB`,
-      OBTAINED: `2019.10.01`,
-    },
-    {
-      NAME: `SM`,
-      OBTAINED: `2019.10.01`,
-    },
-    ],
-    PERSONAL_MOD: 0.6, // based on warcraftlogs perfomance - the better you do the less coeff is
-  },
-
-  Ilith: {
-    NAME: `Ilith`,
-    RANK: `Raider`,
-    PENALTIES: [
-    ],
-    GEAR: [{
-      NAME: `DTP`,
-      OBTAINED: `2020.03.25`,
-    },
-    {
-      NAME: `OG`,
-      OBTAINED: `2019.10.01`,
-    },
-    {
-      NAME: `WS`,
-      OBTAINED: `2019.10.01`,
-    },
-    {
-      NAME: `QSR`,
-      OBTAINED: `2020.04.27`,
-    },
-    {
-      NAME: `CAF`,
-      OBTAINED: `2020.04.08`,
-    },
-    {
-      NAME: `DB`,
-      OBTAINED: `2020.02.27`,
-    },
-    {
-      NAME: `PB`,
-      OBTAINED: `2019.10.01`,
-    },
-    {
-      NAME: `SM`,
-      OBTAINED: `2020.03.12`,
-    },
-    ],
-    PERSONAL_MOD: 1.4, // based on warcraftlogs perfomance - the better you do the less coeff is
-  },
-
-  Sveredom: {
-    NAME: `Sveredom`,
-    RANK: `Raider`,
-    PENALTIES: [
-    ],
-    GEAR: [{
-      NAME: `OG`,
-      OBTAINED: `2020.03.02`,
-    },
-    {
-      NAME: `CB`,
-      OBTAINED: `2020.02.27`,
-    },
-    {
-      NAME: `QSR`,
-      OBTAINED: `2020.02.20`,
-    },
-    {
-      NAME: `DB`,
-      OBTAINED: `2019.10.01`,
-    },
-    {
-      NAME: `FG`,
-      OBTAINED: `2020.03.02`,
-    },
-    {
-      NAME: `PB`,
-      OBTAINED: `2020.04.06`,
-    },
-    {
-      NAME: `SM`,
-      OBTAINED: `2019.11.27`,
-    },
-    {
-      NAME: `CRUL`,
-      OBTAINED: `2020.02.27`,
-    },
-    {
-      NAME: `WS`,
-      OBTAINED: `2020.01.22`,
-    },
-    ],
-    PERSONAL_MOD: 1.4, // based on warcraftlogs perfomance - the better you do the less coeff is
-  },
-
-  Stanuubius: {
-    NAME: `Stanuubius`,
-    RANK: `Raider`,
-    PENALTIES: [
-    ],
-    GEAR: [{
-      NAME: `OG`,
-      OBTAINED: `2019.10.01`,
-    },
-    {
-      NAME: `LFC`,
-      OBTAINED: `2019.10.01`,
-    },
-    {
-      NAME: `QSR`,
-      OBTAINED: `2020.04.27`,
-    },
-    {
-      NAME: `CB`,
-      OBTAINED: `2019.10.01`,
-    },
-    {
-      NAME: `WS`,
-      OBTAINED: `2019.10.01`,
-    },
-    {
-      NAME: `BL`,
-      OBTAINED: `2019.10.01`,
-    },
-    {
-      NAME: `DB`,
-      OBTAINED: `2019.10.01`,
-    },
-    {
-      NAME: `CHT`,
-      OBTAINED: `2019.10.01`,
-    },
-    {
-      NAME: `DFT`,
-      OBTAINED: `2020.04.29`,
-    },
-    ],
-    PERSONAL_MOD: 1.4, // based on warcraftlogs perfomance - the better you do the less coeff is
-  },
-
-  Brooks: {
-    NAME: `Brooks`,
-    RANK: `Raider`,
-    PENALTIES: [
-    ],
-    GEAR: [{
-      NAME: `DTP`,
-      OBTAINED: `2020.03.04`,
-    },
-    {
-      NAME: `WS`,
-      OBTAINED: `2019.12.11`,
-    },
-    {
-      NAME: `FG`,
-      OBTAINED: `2019.12.18`,
-    },
-    {
-      NAME: `OG`,
-      OBTAINED: `2020.01.22`,
-    },
-    {
-      NAME: `QSR`,
-      OBTAINED: `2020.01.02`,
-    },
-    {
-      NAME: `DFT`,
-      OBTAINED: `2020.02.13`,
-    },
-    {
-      NAME: `SM`,
-      OBTAINED: `2020.01.22`,
-    },
-    {
-      NAME: `VIS`,
-      OBTAINED: `2019.12.16`,
-    },
-    {
-      NAME: `BB`,
-      OBTAINED: `2020.02.13`,
-    },
-    ],
-    PERSONAL_MOD: 0.5, // based on warcraftlogs perfomance - the better you do the less coeff is
-  },
-  // TODO Add tanks to the list
-
-
-  TargetDummy: {
-    NAME: `TargetDummy`,
-    RANK: `Trial`,
-    PENALTIES: [
-    ],
-    GEAR: [
-    ],
-    PERSONAL_MOD: 0.5, // based on warcraftlogs perfomance - the better you do the less coeff is
-  },
-};
 
 const getGearSum = (warrior) => {
   // returns sum of items scores
-  return warrior.GEAR.reduce((total, it) => total + Gear[it.NAME].SCORE, 0);
+  return warrior.GEAR.reduce((total, it) => total + Gear[it.NAME].VALUE, 0);
 };
 
 const getScoreMod = (warrior) => {
@@ -501,7 +43,7 @@ const getScoreMod = (warrior) => {
 
   // debug
   // console.log(`GEAR:`);
-  // warrior.GEAR.map((it) => console.log(`${Gear[it.NAME].NAME} cost(s) ${Gear[it.NAME].SCORE}`));
+  // warrior.GEAR.map((it) => console.log(`${Gear[it.NAME].NAME} cost(s) ${Gear[it.NAME].VALUE}`));
   // warrior.PENALTIES.map((it) => console.log(`${it.REASON} for ${it.DURATION} day(s) with mod ${it.VALUE} on ${it.ASSIGNED}`));
 
   return Math.round(targetMod * 1000) / 1000;
@@ -514,7 +56,7 @@ const getGearScore = (warrior) => {
 const getGearMarkup = (warrior) => {
   return warrior.GEAR.slice()
     .sort((a, b) => getDaysPassed(a.OBTAINED) - getDaysPassed(b.OBTAINED))
-    .map((it) => `<li class="warrior__gearitem"><a href="${Gear[it.NAME].LINK}"></a> ${getDaysPassed(it.OBTAINED)} day(s) ago</li>`)
+    .map((it) => `<li class="warrior__gearitem"><a href="${Gear[it.NAME].LINK}"></a> <span class="warrior__gearitemscore">[${Gear[it.NAME].VALUE}]</span> ${getDaysPassed(it.OBTAINED)} day(s) ago</li>`)
     .join(`\n`);
 };
 
@@ -581,8 +123,8 @@ for (let index in Warriors) {
 sortedWarriorsRaiders.sort((a, b) => getGearScore(a) - getGearScore(b));
 sortedWarriorsTrials.sort((a, b) => getGearScore(a) - getGearScore(b));
 sortedWarriorsTanks.sort((a, b) => getGearScore(a) - getGearScore(b));
-let sortedWarriors = [].concat(sortedWarriorsTanks, sortedWarriorsTrials, sortedWarriorsRaiders);
-sortedWarriors.sort((a, b) => getGearScore(a) - getGearScore(b));
+let sortedWarriors = [].concat(sortedWarriorsRaiders, sortedWarriorsTanks, sortedWarriorsTrials);
+// sortedWarriors.sort((a, b) => getGearScore(a) - getGearScore(b));
 renderWarriors(sortedWarriors);
 // renderWarriors(sortedWarriorsRaiders);
 // renderWarriors(sortedWarriorsTrials);

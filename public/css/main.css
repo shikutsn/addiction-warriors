@@ -1129,3 +1129,7 @@ button {
   padding: 0 10px;
   font-size: 20px;
 }
+
+.warrior__gearitemscore {
+  color: #ff0000;
+}
