@@ -1084,25 +1084,28 @@ button {
 }
 
 .warrior__caption-container {
-  width: 220px;
+  width: 180px;
+  margin-right: 15px;
+  border-right: solid 2px #31353f;
 }
 
 .warrior {
-  padding-bottom: 30px;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
   display: flex;
-  /* margin-bottom: 50px;
-  position: relative; */
+  border-bottom: solid 2px #31353f;
 }
 
 .warrior__gear {
   list-style: none;
   padding: 0;
   margin: 0;
-  max-height: 160px;
-  width: 800px;
+  /* min-height: 160px; */
+  width: 450px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  border-right: solid 2px #31353f;
 }
 
 .warrior__gearitem {
@@ -1132,4 +1135,40 @@ button {
 
 .warrior__gearitemscore {
   color: #ff0000;
+}
+
+.important-loot-list {
+  /* temporary */
+  min-height: 50px;
+  display: flex;
+  border-bottom: solid 2px #31353f;
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+}
+
+.important-loot-list__dft {
+  width: 50%;
+  /* temporary */
+  min-height: 50px;
+}
+
+.important-loot-list__cts {
+  width: 50%;
+  /* temporary */
+  min-height: 50px;
+}
+
+.important-loot-list__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 50%;
+}
+
+.important-loot-list__container {
+  display: flex;
+}
+
+.important-loot-list__warrior-name {
+  color: #ffff00;
 }

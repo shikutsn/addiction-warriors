@@ -371,15 +371,24 @@ const Warriors = {
     PERSONAL_MOD: 1.0, // based on warcraftlogs perfomance - the better you do the less coeff is
   },
 
-
-  TargetDummy: {
-    NAME: `TargetDummy`,
+  Oneforce: {
+    NAME: `Oneforce`,
     RANK: `Trial`,
     PENALTIES: [
     ],
     GEAR: [
     ],
-    PERSONAL_MOD: 0.5, // based on warcraftlogs perfomance - the better you do the less coeff is
+    PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
+  },
+
+  Savante: {
+    NAME: `Savante`,
+    RANK: `Trial`,
+    PENALTIES: [
+    ],
+    GEAR: [
+    ],
+    PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
   },
 };
 

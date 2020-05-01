@@ -2,6 +2,7 @@ import {getDaysPassed, getRandomNumber} from "./utils/common.js";
 import {createElement} from "./utils/render.js";
 import {Gear} from "./data/loot-base.js";
 import {Warriors} from "./data/warriors.js";
+import {DFTowners, CTSowners} from "./data/important-loot.js";
 
 // TODO publish it on github.io? so that everyone could check it
 
@@ -15,11 +16,12 @@ import {Warriors} from "./data/warriors.js";
 // based on warcraftlogs performance every individual gets some modifier to his overall gear rating. The better that individual performs the less it becomes making your final gear rating less therefore making you to likely get an item
 // then you get 2 weeks long increase to your gear rating after looting something. Value of it depends on quality of item you looted (?)
 // should probably add increasing gear rating buff if you didnt get items for a while. Lets say 0.95**(noLootWeeksCouns)
+// if you have edgemasters and are fine with axes/daggers - you also get permanent 0.9 modifier to gear score (making you more likely to get loot)
 
 const GearMods = {
   // modifiers after you got something
   DURATION: 14, // how long it lasts
-  MOD: 1.2, // mod to final gear
+  MOD: 1.2, // mod to final gearscore
 };
 
 
@@ -68,7 +70,8 @@ const getWarriorTemplate = (warrior, number) => {
   const gearScore = getGearScore(warrior);
   const gearMarkup = getGearMarkup(warrior);
 
-  return (`<article class="warrior">
+  return (
+    `<article class="warrior">
     <div class="warrior__caption-container">
       <span class="warrior__data warrior__data--name">${number}) ${warrior.NAME}</span>
       <span class="warrior__data warrior__data--rank">${warrior.RANK}</span>
@@ -79,7 +82,8 @@ const getWarriorTemplate = (warrior, number) => {
     <ul class="warrior__gear">
       ${gearMarkup}
     </ul>
-  </article>`);
+  </article>`
+  );
 };
 
 const renderWarriors = (warriorsArray) => {
@@ -88,6 +92,8 @@ const renderWarriors = (warriorsArray) => {
   warriorsArray.forEach((it, i) => {
     const warriorElement = createElement(getWarriorTemplate(it, i + 1));
     containerElement.append(warriorElement);
+    // debug
+    console.log(warriorElement);
   });
 };
 
@@ -126,6 +132,7 @@ sortedWarriorsTanks.sort((a, b) => getGearScore(a) - getGearScore(b));
 let sortedWarriors = [].concat(sortedWarriorsRaiders, sortedWarriorsTanks, sortedWarriorsTrials);
 // sortedWarriors.sort((a, b) => getGearScore(a) - getGearScore(b));
 renderWarriors(sortedWarriors);
+
 // renderWarriors(sortedWarriorsRaiders);
 // renderWarriors(sortedWarriorsTrials);
 // renderWarriors(sortedWarriorsTanks);
@@ -149,3 +156,56 @@ renderWarriors(sortedWarriors);
 //     renderWarriors(sortedWarriorsTanks);
 //   }
 // });
+const getOwnersTemplate = (dft, cts) => {
+  const getItemMarkup = (arr) => {
+    // returns li of one person getting important item
+    return arr
+      .slice()
+      .sort((a, b) => getDaysPassed(a.OBTAINED) - getDaysPassed(b.OBTAINED))
+      .map((it) => `<li><span class="important-loot-list__warrior-name">${it.NAME}</span> at ${it.OBTAINED}, ${getDaysPassed(it.OBTAINED)} day(s) ago</li>`)
+      .join(`\n`);
+  };
+
+  const dftWarriorsMarkup = getItemMarkup(dft.filter((it) => it.CLASS === `warrior`));
+  const dftRoguesMarkup = getItemMarkup(dft.filter((it) => it.CLASS === `rogue`));
+  const ctsWarriorsMarkup = getItemMarkup(cts.filter((it) => it.CLASS === `warrior`));
+  const ctsRoguesMarkup = getItemMarkup(cts.filter((it) => it.CLASS === `rogue`));
+
+  return (
+    `<section class="important-loot-list">
+      <article class="important-loot-list__dft">
+        <h2 class="important-loot-list__dft-caption">DFT owners [what to do with leavers?] (<a href="https://classic.wowhead.com/item=19406/drake-fang-talisman"></a>)</h2>
+        <div class="important-loot-list__container">
+          <ul class="important-loot-list__list important-loot-list__dft-warriors">
+            ${dftWarriorsMarkup}
+          </ul>
+          <ul class="important-loot-list__list important-loot-list__dft-rogues">
+            ${dftRoguesMarkup}
+          </ul>
+        </div>
+      </article>
+      <article class="important-loot-list__cts">
+        <h2 class="important-loot-list__cts-caption">CTS owners (<a href="https://classic.wowhead.com/item=19352/chromatically-tempered-sword"></a>)</h2>
+        <div class="important-loot-list__container">
+          <ul class="important-loot-list__list important-loot-list__cts-warriors">
+            ${ctsWarriorsMarkup}
+          </ul>
+          <ul class="important-loot-list__list important-loot-list__cts-rogues">
+            ${ctsRoguesMarkup}
+          </ul>
+        </div
+      </article>
+    </section>`
+  );
+};
+
+const mainElement = document.querySelector(`.main`);
+
+// console.log(getOwnersTemplate(DFTowners, CTSowners));
+// console.log(createElement(getOwnersTemplate(DFTowners, CTSowners)))
+// mainElement.prepend(createElement(getOwnersTemplate(DFTowners, CTSowners)));
+
+const tmp = getOwnersTemplate(DFTowners, CTSowners);
+// console.log(tmp);
+console.log(`--` + createElement(tmp) + `--`);
+mainElement.prepend(createElement(tmp));
