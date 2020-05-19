@@ -1,8 +1,14 @@
 import {getDaysPassed} from "./utils/common.js";
 import {createElement} from "./utils/render.js";
-import {Gear} from "./data/loot-base.js";
+import {Gear, McLoot, BwlLoot} from "./data/loot-base.js";
 import {Warriors} from "./data/warriors.js";
-import {DFTowners, CTSowners} from "./data/important-loot.js";
+import {DFTowners, CTSowners, SMowners} from "./data/important-loot.js";
+
+// TODO add items missing from BWL or MC - array of items needed and it calculates what is missing based on it
+// TODO Questions to Fenix and Zee
+// 1) what to do with those who left when deciding who gets next major shared item (dft or cts) - will we just remove them (if its meant to be 1-1 ratio or will we continue keeping them in mind. In case of dft dascha and knight left while only cael did)
+// 2) @zee: how do you treat gearing tanks and tanks getting dps items? Shall we gear tanks first for threat? What about super rare items like dft which dont really bring benefit to tank warriors
+
 
 // TODO publish it on github.io? so that everyone could check it
 
@@ -15,8 +21,9 @@ import {DFTowners, CTSowners} from "./data/important-loot.js";
 // that includes stuff like two handed weapons but doesnt include pure tanking oriented gear (sets, shields, trinkets etc)
 // based on warcraftlogs performance every individual gets some modifier to his overall gear rating. The better that individual performs the less it becomes making your final gear rating less therefore making you to likely get an item
 // then you get 2 weeks long increase to your gear rating after looting something. Value of it depends on quality of item you looted (?)
-// should probably add increasing gear rating buff if you didnt get items for a while. Lets say 0.95**(noLootWeeksCouns)
+// should probably add increasing gear rating buff if you didnt get items for a while. Lets say 0.95**(noLootWeeksCount)
 // if you have edgemasters and are fine with axes/daggers - you also get permanent 0.9 modifier to gear score (making you more likely to get loot)
+// do like 0.96, 0.92 and so one modifiers for warcraftlogs standings
 
 const GearMods = {
   // modifiers after you got something
@@ -141,6 +148,7 @@ const renderWarriors = (warriorsArray) => {
   });
 };
 
+// TODO actually its better just to insert whole <section>
 const containerElement = document.querySelector(`.warriors-list`);
 
 let sortedWarriorsRaiders = [];
@@ -175,7 +183,6 @@ sortedWarriorsTrials.sort((a, b) => getGearScore(a) - getGearScore(b));
 sortedWarriorsTanks.sort((a, b) => getGearScore(a) - getGearScore(b));
 let sortedWarriors = [].concat(sortedWarriorsRaiders, sortedWarriorsTanks, sortedWarriorsTrials);
 // sortedWarriors.sort((a, b) => getGearScore(a) - getGearScore(b));
-renderWarriors(sortedWarriors);
 
 // renderWarriors(sortedWarriorsRaiders);
 // renderWarriors(sortedWarriorsTrials);
@@ -200,7 +207,8 @@ renderWarriors(sortedWarriors);
 //     renderWarriors(sortedWarriorsTanks);
 //   }
 // });
-const getOwnersTemplate = (dft, cts) => {
+
+const getOwnersTemplate = (dft, cts, sm) => {
   const getItemMarkup = (arr) => {
     // returns li of one person getting important item
     return arr
@@ -214,11 +222,13 @@ const getOwnersTemplate = (dft, cts) => {
   const dftRoguesMarkup = getItemMarkup(dft.filter((it) => it.CLASS === `rogue`));
   const ctsWarriorsMarkup = getItemMarkup(cts.filter((it) => it.CLASS === `warrior`));
   const ctsRoguesMarkup = getItemMarkup(cts.filter((it) => it.CLASS === `rogue`));
+  const smWarriorsMarkup = getItemMarkup(sm.filter((it) => it.CLASS === `warrior`));
+  const smRoguesMarkup = getItemMarkup(sm.filter((it) => it.CLASS === `rogue`));
 
   return (
     `<section class="important-loot-list">
       <article class="important-loot-list__dft">
-        <h2 class="important-loot-list__dft-caption">DFT owners [what to do with leavers?] (<a href="https://classic.wowhead.com/item=19406/drake-fang-talisman"></a>)</h2>
+        <h2 class="important-loot-list__dft-caption">DFT owners (<a href="https://classic.wowhead.com/item=19406/drake-fang-talisman"></a>)</h2>
         <div class="important-loot-list__container">
           <ul class="important-loot-list__list important-loot-list__dft-warriors">
             ${dftWarriorsMarkup}
@@ -237,19 +247,91 @@ const getOwnersTemplate = (dft, cts) => {
           <ul class="important-loot-list__list important-loot-list__cts-rogues">
             ${ctsRoguesMarkup}
           </ul>
-        </div
+        </div>
+      </article>
+      <article class="important-loot-list__sm">
+        <h2 class="important-loot-list__sm-caption">SM owners (<a href="https://classic.wowhead.com/item=17069/strikers-mark"></a>)</h2>
+        <div class="important-loot-list__container">
+          <ul class="important-loot-list__list important-loot-list__sm-warriors">
+            ${smWarriorsMarkup}
+          </ul>
+          <ul class="important-loot-list__list important-loot-list__sm-rogues">
+            ${smRoguesMarkup}
+          </ul>
+        </div>
       </article>
     </section>`
   );
 };
 
+// ----------------------------------------------
+const doesWarriorHasItem = (warrior, itemToCheck) => {
+  // returns true if warrior has an items
+  return !!warrior.GEAR.find((it) => it.NAME === itemToCheck);
+};
+
+const getMissingItemMarkup = (warriors, currentItem) => {
+  // returns li of one item with names of those who miss it
+
+  let names = [];
+  for (const index in warriors) {
+    if (warriors.hasOwnProperty(index)) {
+      if (!doesWarriorHasItem(warriors[index], currentItem)) {
+        names.push(warriors[index].NAME);
+      }
+    }
+  }
+  return `<li class="missing-loot-list__item"><a href="${Gear[currentItem].LINK}"></a>: ${names.join(`, `)}</li>`;
+};
+
+const getMissingItemsTemplate = (warriors, mcLoot, bwlLoot) => {
+  const mcMissingLootMarkup = mcLoot.map((it) => {
+    return getMissingItemMarkup(warriors, it);
+  }).join(`\n`);
+  const bwlWarriorsMarkup = bwlLoot.map((it) => {
+    return getMissingItemMarkup(warriors, it);
+  }).join(`\n`);
+
+  return (
+    `<section class="missing-loot-list">
+      <article class="missing-loot-list__mc">
+        <h2 class="missing-loot-list__mc-caption">Missing MC loot:</h2>
+          <ul class="missing-loot-list__list missing-loot-list__mc">
+            ${mcMissingLootMarkup}
+          </ul>
+      </article>
+      <article class="missing-loot-list__bwl">
+        <h2 class="missing-loot-list__bwl-caption">Missing BWL loot</h2>
+          <ul class="missing-loot-list__list missing-loot-list__bwl">
+            ${bwlWarriorsMarkup}
+          </ul>
+      </article>
+    </section>`
+  );
+};
+
+
 const mainElement = document.querySelector(`.main`);
 
-// console.log(getOwnersTemplate(DFTowners, CTSowners));
-// console.log(createElement(getOwnersTemplate(DFTowners, CTSowners)))
-// mainElement.prepend(createElement(getOwnersTemplate(DFTowners, CTSowners)));
+mainElement.append(createElement(getOwnersTemplate(DFTowners, CTSowners, SMowners)));
+mainElement.append(createElement(getMissingItemsTemplate(Warriors, McLoot, BwlLoot)));
+renderWarriors(sortedWarriors);
 
-const tmp = getOwnersTemplate(DFTowners, CTSowners);
+// const tmp = getMissingItemsTemplate(Warriors, McLoot, BwlLoot);
 // console.log(tmp);
-// console.log(`--` + createElement(tmp) + `--`);
-mainElement.prepend(createElement(tmp));
+
+
+// BwlLoot.map((it) => {
+//   let names = [];
+//   for (let index in Warriors) {
+//     if (Warriors.hasOwnProperty(index)) {
+//       if (!doesWarriorHasItem(Warriors[index], it)) {
+//         names.push(Warriors[index].NAME);
+//       }
+//     }
+//   }
+//   let stringOfNames = `${Gear[it].NAME} (${Gear[it].LINK}): ` + names.join(`, `);
+//   console.log(stringOfNames);
+// });
+
+// TODO add strikers mark to important loot

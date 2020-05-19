@@ -121,6 +121,16 @@ const Gear = {
     LINK: `https://classic.wowhead.com/item=18805/core-hound-tooth`,
     VALUE: 20,
   },
+  BWL: {
+    NAME: `Bindings of the Windseeker (geddon, left)`,
+    LINK: `https://classic.wowhead.com/item=18563/bindings-of-the-windseeker`,
+    VALUE: 60,
+  },
+  BWR: {
+    NAME: `Bindings of the Windseeker (garr, right)`,
+    LINK: `https://classic.wowhead.com/item=18564/bindings-of-the-windseeker`,
+    VALUE: 60,
+  },
   DUMMY: {
     NAME: ``,
     LINK: ``,
@@ -130,4 +140,8 @@ const Gear = {
   // TODO BRE, SPINAL REAPER?
 };
 
-export {Gear};
+const McLoot = [`QSR`, `WS`, `FG`, `OG`, `SM`, `BB`];
+
+const BwlLoot = [`CTS`, `DFT`, `CB`, `CAF`, `LFC`, `CDM`, `MALA`, `DTP`, `CRUL`];
+
+export {Gear, McLoot, BwlLoot};

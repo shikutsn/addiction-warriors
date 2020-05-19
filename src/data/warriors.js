@@ -1,4 +1,8 @@
 const Warriors = {
+  // TODO add note field like `note: has edgemasters and goes for axes/daggers`
+  // TODO write a post on discord about what to bring to speed runs / usualy runs
+  // TODO write a post on discord about buffs list andwhat to blacklist
+  // TODO need to actually discuss politics of tank gearing?
   Sintrix: {
     NAME: `Sintrix`,
     RANK: `Raider`,
@@ -9,9 +13,9 @@ const Warriors = {
       VALUE: 1.0, // multiplier to final GearScore
     },
     {
-      REASON: `being cunt NOT DUMMY =D`,
-      ASSIGNED: `2020.03.25`,
-      DURATION: 45, // days
+      REASON: `oversleeping MC splits`,
+      ASSIGNED: `2020.05.13`,
+      DURATION: 21, // days
       VALUE: 1.5, // multiplier to final GearScore
     },
     ],
@@ -31,24 +35,30 @@ const Warriors = {
       NAME: `SM`,
       OBTAINED: `2020.01.02`,
     },
+    {
+      NAME: `WS`,
+      OBTAINED: `2020.05.04`,
+    },
+    {
+      NAME: `QSR`,
+      OBTAINED: `2020.05.04`,
+    },
+    {
+      NAME: `BWL`,
+      OBTAINED: `2020.05.12`,
+    },
     ],
     PERSONAL_MOD: 0.9, // based on warcraftlogs perfomance - the better you do the less coeff is
   },
 
   Peoplekiller: {
-    NAME: `Peoplekiller`,
+    NAME: `Peoplekiller (has edgies and DB + CHT)`,
     RANK: `Raider`,
     PENALTIES: [{
-      REASON: `no world buffs- DUMMY`,
-      ASSIGNED: `2020.03.21`,
-      DURATION: 10, // days
-      VALUE: 1.0, // multiplier to final GearScore
-    },
-    {
-      REASON: `being laggy DUMMY`,
-      ASSIGNED: `2020.04.12`,
+      REASON: `No Flask while BWL speedrun`,
+      ASSIGNED: `2020.05.07`,
       DURATION: 15, // days
-      VALUE: 1.0, // multiplier to final GearScore
+      VALUE: 1.5, // multiplier to final GearScore
     },
     ],
     GEAR: [{
@@ -71,13 +81,21 @@ const Warriors = {
       NAME: `DB`,
       OBTAINED: `2019.11.11`,
     },
+    {
+      NAME: `CHT`,
+      OBTAINED: `2020.05.04`,
+    },
+    {
+      NAME: `WS`,
+      OBTAINED: `2020.05.13`,
+    },
     ],
     PERSONAL_MOD: 1.4, // based on warcraftlogs perfomance - the better you do the less coeff is
   },
 
   Exet: {
     NAME: `Exet`,
-    RANK: `Trial`,
+    RANK: `Raider`,
     PENALTIES: [
     ],
     GEAR: [{
@@ -88,12 +106,24 @@ const Warriors = {
       NAME: `CRUL`,
       OBTAINED: `2019.10.01`,
     },
+    {
+      NAME: `QSR`,
+      OBTAINED: `2020.05.11`,
+    },
+    {
+      NAME: `OG`,
+      OBTAINED: `2020.05.11`,
+    },
+    {
+      NAME: `WS`,
+      OBTAINED: `2020.05.13`,
+    },
     ],
     PERSONAL_MOD: 1.4, // based on warcraftlogs perfomance - the better you do the less coeff is
   },
 
   Elitekoala: {
-    NAME: `Elitekoala`,
+    NAME: `Elitekoala (wants CTS over DFT, wants DFT as last prio)`,
     RANK: `Raider`,
     PENALTIES: [
     ],
@@ -137,12 +167,16 @@ const Warriors = {
       NAME: `SM`,
       OBTAINED: `2019.10.01`,
     },
+    {
+      NAME: `CDM`,
+      OBTAINED: `2020.05.18`,
+    },
     ],
     PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
   },
 
   Ilith: {
-    NAME: `Ilith`,
+    NAME: `Ilith (wants cts+crul or crul+perd, has edgies, wants CAF)`,
     RANK: `Raider`,
     PENALTIES: [
     ],
@@ -177,6 +211,10 @@ const Warriors = {
     {
       NAME: `SM`,
       OBTAINED: `2020.03.12`,
+    },
+    {
+      NAME: `LFC`,
+      OBTAINED: `2020.05.18`,
     },
     ],
     PERSONAL_MOD: 1.4, // based on warcraftlogs perfomance - the better you do the less coeff is
@@ -223,12 +261,16 @@ const Warriors = {
       NAME: `WS`,
       OBTAINED: `2020.01.22`,
     },
+    {
+      NAME: `BB`,
+      OBTAINED: `2020.05.04`,
+    },
     ],
     PERSONAL_MOD: 1.4, // based on warcraftlogs perfomance - the better you do the less coeff is
   },
 
   Stanuubius: {
-    NAME: `Stanuubius`,
+    NAME: `Stanuubius - wants crul/bb, has edgies - move it to note?`,
     RANK: `Raider`,
     PENALTIES: [
     ],
@@ -390,6 +432,14 @@ const Warriors = {
       NAME: `PB`,
       OBTAINED: `2020.01.29`,
     },
+    {
+      NAME: `BWR`,
+      OBTAINED: `2019.10.01`,
+    },
+    {
+      NAME: `FG`,
+      OBTAINED: `2020.05.13`,
+    },
     ],
     PERSONAL_MOD: 1.0, // based on warcraftlogs perfomance - the better you do the less coeff is
   },
@@ -397,7 +447,12 @@ const Warriors = {
   Oneforce: {
     NAME: `Oneforce`,
     RANK: `Trial`,
-    PENALTIES: [
+    PENALTIES: [{
+      REASON: `No WB MC splits`,
+      ASSIGNED: `2020.05.13`,
+      DURATION: 15, // days
+      VALUE: 1.5, // multiplier to final GearScore
+    },
     ],
     GEAR: [
     ],
@@ -405,14 +460,49 @@ const Warriors = {
   },
 
   Savante: {
-    NAME: `Savante`,
+    NAME: `Savante (dwarf with edgies)`,
     RANK: `Trial`,
-    PENALTIES: [
+    PENALTIES: [{
+      REASON: `No Flask while BWL speedrun`,
+      ASSIGNED: `2020.05.07`,
+      DURATION: 15, // days
+      VALUE: 1.5, // multiplier to final GearScore
+    },
     ],
     GEAR: [
     ],
     PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
   },
+
+  Legabis: {
+    NAME: `Legabis (has edgies)`,
+    RANK: `Trial`,
+    PENALTIES: [
+    ],
+    GEAR: [{
+      NAME: `DTP`,
+      OBTAINED: `2019.10.01`,
+    },
+    {
+      NAME: `OG`,
+      OBTAINED: `2019.10.01`,
+    },
+    {
+      NAME: `WS`,
+      OBTAINED: `2019.10.01`,
+    },
+    {
+      NAME: `DB`,
+      OBTAINED: `2019.10.01`,
+    },
+    {
+      NAME: `CRUL`,
+      OBTAINED: `2019.10.01`,
+    },
+    ],
+    PERSONAL_MOD: 1.0, // based on warcraftlogs perfomance - the better you do the less coeff is
+  },
+
 };
 
 export {Warriors};

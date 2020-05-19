@@ -34,6 +34,11 @@ const DFTowners = [
     OBTAINED: `2020.04.08`,
     CLASS: `rogue`,
   },
+  {
+    NAME: `Zippah`,
+    OBTAINED: `2020.04.08`,
+    CLASS: `rogue`,
+  },
 ];
 
 const CTSowners = [
@@ -64,4 +69,52 @@ const CTSowners = [
   },
 ];
 
-export {DFTowners, CTSowners};
+const SMowners = [
+  {
+    NAME: `Brooks`,
+    OBTAINED: `2020.01.22`,
+    CLASS: `warrior`,
+  },
+  {
+    NAME: `Sintrix`,
+    OBTAINED: `2020.01.02`,
+    CLASS: `warrior`,
+  },
+  {
+    NAME: `Elitekoala`,
+    OBTAINED: `2019.10.01`,
+    CLASS: `warrior`,
+  },
+  {
+    NAME: `Ilith`,
+    OBTAINED: `2020.03.12`,
+    CLASS: `warrior`,
+  },
+  {
+    NAME: `Sveredom`,
+    OBTAINED: `2019.11.27`,
+    CLASS: `warrior`,
+  },
+  {
+    NAME: `Caelwynn`,
+    OBTAINED: `2019.12.04`,
+    CLASS: `rogue`,
+  },
+  {
+    NAME: `Fenix`,
+    OBTAINED: `2020.01.15`,
+    CLASS: `rogue`,
+  },
+  {
+    NAME: `Twisty`,
+    OBTAINED: `2020.01.02`,
+    CLASS: `rogue`,
+  },
+  {
+    NAME: `Zrzazin`,
+    OBTAINED: `2020.05.13`,
+    CLASS: `rogue`,
+  },
+];
+
+export {DFTowners, CTSowners, SMowners};

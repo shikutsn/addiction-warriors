@@ -1138,28 +1138,29 @@ button {
   color: #ff0000;
 }
 
-.important-loot-list {
+.important-loot-list,
+.missing-loot-list {
   /* temporary */
   min-height: 50px;
   display: flex;
+  flex-wrap: wrap;
   border-bottom: solid 2px #31353f;
   padding-bottom: 15px;
   margin-bottom: 30px;
 }
 
-.important-loot-list__dft {
+.important-loot-list__dft,
+.important-loot-list__cts,
+.important-loot-list__sm,
+.missing-loot-list__mc,
+.missing-loot-list__bwl {
   width: 50%;
   /* temporary */
   min-height: 50px;
 }
 
-.important-loot-list__cts {
-  width: 50%;
-  /* temporary */
-  min-height: 50px;
-}
-
-.important-loot-list__list {
+.important-loot-list__list,
+.missing-loot-list__list {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -1180,8 +1181,10 @@ button {
 }
 
 .important-loot-list__dft-warriors,
-.important-loot-list__cts-warriors {
+.important-loot-list__cts-warriors,
+.important-loot-list__sm-warriors {
   margin-right: 15px;
+  padding-left: 15px;
   border-right: solid 2px #31353f;
 }
 
@@ -1221,4 +1224,8 @@ button {
   margin: 0;
   text-align: center;
   padding-bottom: 15px;
+}
+
+.missing-loot-list__item {
+  padding-bottom: 10px;
 }
