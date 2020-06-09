@@ -39,12 +39,22 @@ const DFTowners = [
     OBTAINED: `2020.04.08`,
     CLASS: `rogue`,
   },
+  {
+    NAME: `Twisty`,
+    OBTAINED: `2020.05.27`,
+    CLASS: `rogue`,
+  },
 ];
 
 const CTSowners = [
   {
     NAME: `Sintrix`,
     OBTAINED: `2020.04.20`,
+    CLASS: `warrior`,
+  },
+  {
+    NAME: `Brooks`,
+    OBTAINED: `2020.05.27`,
     CLASS: `warrior`,
   },
   {
@@ -93,6 +103,11 @@ const SMowners = [
   {
     NAME: `Sveredom`,
     OBTAINED: `2019.11.27`,
+    CLASS: `warrior`,
+  },
+  {
+    NAME: `Legabis`,
+    OBTAINED: `2020.06.01`,
     CLASS: `warrior`,
   },
   {

@@ -47,12 +47,24 @@ const Warriors = {
       NAME: `BWL`,
       OBTAINED: `2020.05.12`,
     },
+    {
+      NAME: `BB`,
+      OBTAINED: `2020.06.01`,
+    },
+    {
+      NAME: `OG`,
+      OBTAINED: `2020.06.01`,
+    },
+    {
+      NAME: `CAF`,
+      OBTAINED: `2020.06.08`,
+    },
     ],
     PERSONAL_MOD: 0.9, // based on warcraftlogs perfomance - the better you do the less coeff is
   },
 
   Peoplekiller: {
-    NAME: `Peoplekiller (has edgies and DB + CHT)`,
+    NAME: `Peoplekiller (has edgies and DB + CHT, doesnt want FG)`,
     RANK: `Raider`,
     PENALTIES: [{
       REASON: `No Flask while BWL speedrun`,
@@ -94,7 +106,7 @@ const Warriors = {
   },
 
   Exet: {
-    NAME: `Exet`,
+    NAME: `Exet (doesnt want FG, has edgies)`,
     RANK: `Raider`,
     PENALTIES: [
     ],
@@ -118,12 +130,16 @@ const Warriors = {
       NAME: `WS`,
       OBTAINED: `2020.05.13`,
     },
+    {
+      NAME: `LFC`,
+      OBTAINED: `2020.05.27`,
+    },
     ],
     PERSONAL_MOD: 1.4, // based on warcraftlogs perfomance - the better you do the less coeff is
   },
 
   Elitekoala: {
-    NAME: `Elitekoala (wants CTS over DFT, wants DFT as last prio)`,
+    NAME: `Elitekoala (wants CTS over DFT, wants DFT as last prio, fucks around with alts - lower his prios)`,
     RANK: `Raider`,
     PENALTIES: [
     ],
@@ -179,6 +195,12 @@ const Warriors = {
     NAME: `Ilith (wants cts+crul or crul+perd, has edgies, wants CAF)`,
     RANK: `Raider`,
     PENALTIES: [
+      {
+        REASON: `No Flask while BWL speedrun`,
+        ASSIGNED: `2020.06.08`,
+        DURATION: 15, // days
+        VALUE: 1.5, // multiplier to final GearScore
+      },
     ],
     GEAR: [{
       NAME: `DTP`,
@@ -215,6 +237,14 @@ const Warriors = {
     {
       NAME: `LFC`,
       OBTAINED: `2020.05.18`,
+    },
+    {
+      NAME: `BL`,
+      OBTAINED: `2020.06.01`,
+    },
+    {
+      NAME: `FG`,
+      OBTAINED: `2020.06.03`,
     },
     ],
     PERSONAL_MOD: 1.4, // based on warcraftlogs perfomance - the better you do the less coeff is
@@ -310,6 +340,10 @@ const Warriors = {
       NAME: `DFT`,
       OBTAINED: `2020.04.29`,
     },
+    {
+      NAME: `CF`,
+      OBTAINED: `2019.10.10`,
+    },
     ],
     PERSONAL_MOD: 1.4, // based on warcraftlogs perfomance - the better you do the less coeff is
   },
@@ -377,6 +411,14 @@ const Warriors = {
     {
       NAME: `BB`,
       OBTAINED: `2020.02.13`,
+    },
+    {
+      NAME: `CDM`,
+      OBTAINED: `2020.05.20`,
+    },
+    {
+      NAME: `CTS`,
+      OBTAINED: `2020.05.27`,
     },
     ],
     PERSONAL_MOD: 0.5, // based on warcraftlogs perfomance - the better you do the less coeff is
@@ -455,13 +497,17 @@ const Warriors = {
     },
     ],
     GEAR: [
+      {
+        NAME: `FG`,
+        OBTAINED: `2020.06.01`,
+      },
     ],
     PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
   },
 
   Savante: {
     NAME: `Savante (dwarf with edgies)`,
-    RANK: `Trial`,
+    RANK: `Tank`,
     PENALTIES: [{
       REASON: `No Flask while BWL speedrun`,
       ASSIGNED: `2020.05.07`,
@@ -477,7 +523,18 @@ const Warriors = {
   Legabis: {
     NAME: `Legabis (has edgies)`,
     RANK: `Trial`,
-    PENALTIES: [
+    PENALTIES: [{
+      REASON: `Didnt show up for 2nd BWL split (spontaneous family visit)`,
+      ASSIGNED: `2020.05.17`,
+      DURATION: 14, // days
+      VALUE: 1.5, // multiplier to final GearScore
+    },
+    {
+      REASON: `No sunders on BWL bosses during speedrun 2020.06.08`,
+      ASSIGNED: `2020.06.08`,
+      DURATION: 14, // days
+      VALUE: 1.5, // multiplier to final GearScore
+    },
     ],
     GEAR: [{
       NAME: `DTP`,
@@ -498,6 +555,14 @@ const Warriors = {
     {
       NAME: `CRUL`,
       OBTAINED: `2019.10.01`,
+    },
+    {
+      NAME: `PB`,
+      OBTAINED: `2019.10.01`,
+    },
+    {
+      NAME: `SM`,
+      OBTAINED: `2020.06.01`,
     },
     ],
     PERSONAL_MOD: 1.0, // based on warcraftlogs perfomance - the better you do the less coeff is
