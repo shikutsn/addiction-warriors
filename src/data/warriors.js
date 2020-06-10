@@ -516,6 +516,10 @@ const Warriors = {
     },
     ],
     GEAR: [
+      {
+        NAME: `OG`,
+        OBTAINED: `2020.06.10`,
+      },
     ],
     PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
   },

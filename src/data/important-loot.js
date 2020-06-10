@@ -130,6 +130,11 @@ const SMowners = [
     OBTAINED: `2020.05.13`,
     CLASS: `rogue`,
   },
+  {
+    NAME: `Zippah`,
+    OBTAINED: `2020.06.10`,
+    CLASS: `rogue`,
+  },
 ];
 
 export {DFTowners, CTSowners, SMowners};
