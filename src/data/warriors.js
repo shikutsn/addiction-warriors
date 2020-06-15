@@ -142,6 +142,12 @@ const Warriors = {
     NAME: `Elitekoala (wants CTS over DFT, wants DFT as last prio, fucks around with alts - lower his prios)`,
     RANK: `Raider`,
     PENALTIES: [
+      {
+        REASON: `Refused to go ZG speedrun at 2020.06.11`,
+        ASSIGNED: `2020.06.11`,
+        DURATION: 30, // days
+        VALUE: 1.5, // multiplier to final GearScore
+      },
     ],
     GEAR: [{
       NAME: `DTP`,
@@ -187,6 +193,10 @@ const Warriors = {
       NAME: `CDM`,
       OBTAINED: `2020.05.18`,
     },
+    {
+      NAME: `CTS`,
+      OBTAINED: `2020.06.15`,
+    },
     ],
     PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
   },
@@ -199,6 +209,12 @@ const Warriors = {
         REASON: `No Flask while BWL speedrun`,
         ASSIGNED: `2020.06.08`,
         DURATION: 15, // days
+        VALUE: 1.5, // multiplier to final GearScore
+      },
+      {
+        REASON: `Refused to go ZG speedrun at 2020.06.11`,
+        ASSIGNED: `2020.06.11`,
+        DURATION: 30, // days
         VALUE: 1.5, // multiplier to final GearScore
       },
     ],
@@ -303,6 +319,12 @@ const Warriors = {
     NAME: `Stanuubius - wants crul/bb, has edgies - move it to note?`,
     RANK: `Raider`,
     PENALTIES: [
+      {
+        REASON: `Refused to go ZG speedrun at 2020.06.11`,
+        ASSIGNED: `2020.06.11`,
+        DURATION: 30, // days
+        VALUE: 1.5, // multiplier to final GearScore
+      },
     ],
     GEAR: [{
       NAME: `OG`,
@@ -343,6 +365,10 @@ const Warriors = {
     {
       NAME: `CF`,
       OBTAINED: `2019.10.10`,
+    },
+    {
+      NAME: `CAF`,
+      OBTAINED: `2020.06.15`,
     },
     ],
     PERSONAL_MOD: 1.4, // based on warcraftlogs perfomance - the better you do the less coeff is
@@ -567,6 +593,43 @@ const Warriors = {
     {
       NAME: `SM`,
       OBTAINED: `2020.06.01`,
+    },
+    ],
+    PERSONAL_MOD: 1.0, // based on warcraftlogs perfomance - the better you do the less coeff is
+  },
+
+  Everyday: {
+    NAME: `Everyday`,
+    RANK: `Trial`,
+    PENALTIES: [
+    ],
+    GEAR: [{
+      NAME: `DTP`,
+      OBTAINED: `2019.10.01`,
+    },
+    {
+      NAME: `FG`,
+      OBTAINED: `2019.10.01`,
+    },
+    {
+      NAME: `QSR`,
+      OBTAINED: `2019.10.01`,
+    },
+    {
+      NAME: `DFT`,
+      OBTAINED: `2019.10.01`,
+    },
+    {
+      NAME: `SM`,
+      OBTAINED: `2019.10.01`,
+    },
+    {
+      NAME: `VIS`,
+      OBTAINED: `2019.10.01`,
+    },
+    {
+      NAME: `BB`,
+      OBTAINED: `2019.10.01`,
     },
     ],
     PERSONAL_MOD: 1.0, // based on warcraftlogs perfomance - the better you do the less coeff is

@@ -58,8 +58,8 @@ const CTSowners = [
     CLASS: `warrior`,
   },
   {
-    NAME: `Dummy-warrior`,
-    OBTAINED: `2020.03.20`,
+    NAME: `Elitekoala`,
+    OBTAINED: `2020.06.15`,
     CLASS: `warrior`,
   },
   {
@@ -134,6 +134,11 @@ const SMowners = [
     NAME: `Zippah`,
     OBTAINED: `2020.06.10`,
     CLASS: `rogue`,
+  },
+  {
+    NAME: `Everyday`,
+    OBTAINED: `2019.10.01`,
+    CLASS: `warrior`,
   },
 ];
 
