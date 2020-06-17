@@ -1079,7 +1079,7 @@ button {
 }
 
 .warriors-list {
-  font-size: 16px;
+  font-size: 14px;
   margin-top: 20px;
 }
 
@@ -1116,6 +1116,9 @@ button {
   font-size: 20px;
   color: #C79C6E;
 }
+.warrior__data--name-caption {
+  font-size: 20px;
+}
 
 .warrior__data--gearscore {
   color: #ff0000;
@@ -1125,7 +1128,7 @@ button {
   display: block;
   padding-bottom: 10px;
   width: 100%;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .warriors__type-choser {

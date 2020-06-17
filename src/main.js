@@ -110,11 +110,12 @@ const getWarriorTemplate = (warrior, number) => {
   return (
     `<article class="warrior">
     <div class="warrior__caption-container">
-      <span class="warrior__data">${number}) <span class="warrior__data--name">${warrior.NAME}</span></span>
-      <span class="warrior__data warrior__data--rank">${warrior.RANK}</span>
+      <span class="warrior__data--name-caption">${number}) <span class="warrior__data--name">${warrior.NAME}</span></span>
+      <span class="warrior__data warrior__data--rank">Rank: ${warrior.RANK}</span>
       <span class="warrior__data">Gear Score: <span class="warrior__data--gearscore">${gearScore}</span></span>
       <span class="warrior__data warrior__data--gearsum">GearSum: ${gearSum}</span>
       <span class="warrior__data warrior__data--scoremod">ScoreMod: ${scoreMod}</span>
+      <span class="warrior__data">Note: ${warrior.NOTE}</span>
       ${debugString}
     </div>
     <ul class="warrior__gear">
@@ -314,7 +315,7 @@ const getMissingItemsTemplate = (warriors, mcLoot, bwlLoot) => {
 const mainElement = document.querySelector(`.main`);
 
 mainElement.append(createElement(getOwnersTemplate(DFTowners, CTSowners, SMowners)));
-mainElement.append(createElement(getMissingItemsTemplate(Warriors, McLoot, BwlLoot)));
+mainElement.append(createElement(getMissingItemsTemplate(sortedWarriors, McLoot, BwlLoot)));
 renderWarriors(sortedWarriors);
 
 // const tmp = getMissingItemsTemplate(Warriors, McLoot, BwlLoot);
