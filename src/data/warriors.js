@@ -7,18 +7,13 @@ const Warriors = {
     NAME: `Sintrix`,
     RANK: `Raider`,
     NOTE: `Human, no Edgemasters, the cuntest of all cunts`,
-    PENALTIES: [{
-      REASON: `no world buffs DUMMY`,
-      ASSIGNED: `2020.04.25`,
-      DURATION: 15, // days
-      VALUE: 1.0, // multiplier to final GearScore
-    },
-    {
-      REASON: `oversleeping MC splits`,
-      ASSIGNED: `2020.05.13`,
-      DURATION: 21, // days
-      VALUE: 1.5, // multiplier to final GearScore
-    },
+    PENALTIES: [
+      {
+        REASON: `oversleeping MC splits`,
+        ASSIGNED: `2020.05.13`,
+        DURATION: 21, // days
+        VALUE: 1.5, // multiplier to final GearScore
+      },
     ],
     GEAR: [{
       NAME: `CTS`,
@@ -102,6 +97,10 @@ const Warriors = {
     {
       NAME: `WS`,
       OBTAINED: `2020.05.13`,
+    },
+    {
+      NAME: `DTP`,
+      OBTAINED: `2020.06.24`,
     },
     ],
     PERSONAL_MOD: 1.4, // based on warcraftlogs perfomance - the better you do the less coeff is
@@ -384,6 +383,10 @@ const Warriors = {
     {
       NAME: `CAF`,
       OBTAINED: `2020.06.15`,
+    },
+    {
+      NAME: `MALA`,
+      OBTAINED: `2020.06.24`,
     },
     ],
     PERSONAL_MOD: 1.4, // based on warcraftlogs perfomance - the better you do the less coeff is
