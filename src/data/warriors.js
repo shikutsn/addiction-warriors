@@ -14,6 +14,12 @@ const Warriors = {
         DURATION: 21, // days
         VALUE: 1.5, // multiplier to final GearScore
       },
+      {
+        REASON: `oversleeping MC splits AGAIN lol`,
+        ASSIGNED: `2020.06.29`,
+        DURATION: 21, // days
+        VALUE: 1.5, // multiplier to final GearScore
+      },
     ],
     GEAR: [{
       NAME: `CTS`,
@@ -54,6 +60,10 @@ const Warriors = {
     {
       NAME: `CAF`,
       OBTAINED: `2020.06.08`,
+    },
+    {
+      NAME: `FG`,
+      OBTAINED: `2020.06.29`,
     },
     ],
     PERSONAL_MOD: 0.9, // based on warcraftlogs perfomance - the better you do the less coeff is
@@ -101,6 +111,10 @@ const Warriors = {
     {
       NAME: `DTP`,
       OBTAINED: `2020.06.24`,
+    },
+    {
+      NAME: `BB`,
+      OBTAINED: `2020.07.01`,
     },
     ],
     PERSONAL_MOD: 1.4, // based on warcraftlogs perfomance - the better you do the less coeff is
@@ -578,6 +592,10 @@ const Warriors = {
     {
       NAME: `SM`,
       OBTAINED: `2020.06.01`,
+    },
+    {
+      NAME: `QSR`,
+      OBTAINED: `2020.06.29`,
     },
     ],
     PERSONAL_MOD: 1.0, // based on warcraftlogs perfomance - the better you do the less coeff is
