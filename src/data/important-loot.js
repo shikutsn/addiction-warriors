@@ -67,21 +67,6 @@ const CTSowners = [
     OBTAINED: `2020.06.15`,
     CLASS: `warrior`,
   },
-  {
-    NAME: `Dummy-rogue`,
-    OBTAINED: `2020.01.20`,
-    CLASS: `rogue`,
-  },
-  {
-    NAME: `Dummy-warrior`,
-    OBTAINED: `2020.03.25`,
-    CLASS: `warrior`,
-  },
-  {
-    NAME: `Dummy-rogue`,
-    OBTAINED: `2020.02.20`,
-    CLASS: `rogue`,
-  },
 ];
 
 const SMowners = [

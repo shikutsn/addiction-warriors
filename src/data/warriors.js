@@ -125,6 +125,12 @@ const Warriors = {
     RANK: `Raider`,
     NOTE: `Human, has Edgemasters, doesnt want FG`,
     PENALTIES: [
+      {
+        REASON: `Didnt have Rends buff during BWL speed run`,
+        ASSIGNED: `2020.07.06`,
+        DURATION: 21, // days
+        VALUE: 1.5, // multiplier to final GearScore
+      },
     ],
     GEAR: [{
       NAME: `VIS`,
@@ -288,6 +294,10 @@ const Warriors = {
       NAME: `DFT`,
       OBTAINED: `2020.06.18`,
     },
+    {
+      NAME: `BB`,
+      OBTAINED: `2019.10.01`,
+    },
     ],
     PERSONAL_MOD: 1.4, // based on warcraftlogs perfomance - the better you do the less coeff is
   },
@@ -297,6 +307,18 @@ const Warriors = {
     RANK: `Raider`,
     NOTE: `Human, no Edgemasters, pretends to be tank`,
     PENALTIES: [
+      {
+        REASON: `Didnt have Rends buff during BWL speed run`,
+        ASSIGNED: `2020.07.06`,
+        DURATION: 21, // days
+        VALUE: 1.5, // multiplier to final GearScore
+      },
+      {
+        REASON: `Didnt flask while BWL speed run`,
+        ASSIGNED: `2020.07.06`,
+        DURATION: 21, // days
+        VALUE: 1.5, // multiplier to final GearScore
+      },
     ],
     GEAR: [{
       NAME: `OG`,
@@ -524,6 +546,10 @@ const Warriors = {
       NAME: `FG`,
       OBTAINED: `2020.05.13`,
     },
+    {
+      NAME: `CB`,
+      OBTAINED: `2020.07.06`,
+    },
     ],
     PERSONAL_MOD: 1.0, // based on warcraftlogs perfomance - the better you do the less coeff is
   },
@@ -536,6 +562,12 @@ const Warriors = {
       REASON: `No Flask while BWL speedrun`,
       ASSIGNED: `2020.05.07`,
       DURATION: 15, // days
+      VALUE: 1.5, // multiplier to final GearScore
+    },
+    {
+      REASON: `Didnt have Rends buff during BWL speed run`,
+      ASSIGNED: `2020.07.06`,
+      DURATION: 21, // days
       VALUE: 1.5, // multiplier to final GearScore
     },
     ],
@@ -643,29 +675,20 @@ const Warriors = {
     PERSONAL_MOD: 1.0, // based on warcraftlogs perfomance - the better you do the less coeff is
   },
 
-  Dundan: {
-    NAME: `Dundan`,
+  Engeven: {
+    NAME: `Engeven`,
     RANK: `Tank`,
     NOTE: `Human`,
     PENALTIES: [
     ],
     GEAR: [
       {
-        NAME: `OG`,
-        OBTAINED: `2019.10.01`,
-      },
-      {
-        NAME: `FG`,
-        OBTAINED: `2019.10.01`,
-      },
-      {
-        NAME: `PB`,
-        OBTAINED: `2019.10.01`,
+        NAME: `CB`,
+        OBTAINED: `2020.07.06`,
       },
     ],
     PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
   },
-
 };
 
 export {Warriors};
