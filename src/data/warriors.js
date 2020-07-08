@@ -20,6 +20,12 @@ const Warriors = {
         DURATION: 21, // days
         VALUE: 1.5, // multiplier to final GearScore
       },
+      {
+        REASON: `Used recklessness on vaelastrasz instead of firemaw during BWL speedrun 2020.07.08`,
+        ASSIGNED: `2020.06.11`,
+        DURATION: 30, // days
+        VALUE: 1.5, // multiplier to final GearScore
+      },
     ],
     GEAR: [{
       NAME: `CTS`,
@@ -116,6 +122,11 @@ const Warriors = {
       NAME: `BB`,
       OBTAINED: `2020.07.01`,
     },
+    {
+      NAME: `CB`,
+      OBTAINED: `2020.07.08`,
+    },
+
     ],
     PERSONAL_MOD: 1.4, // based on warcraftlogs perfomance - the better you do the less coeff is
   },
@@ -224,6 +235,10 @@ const Warriors = {
       NAME: `CTS`,
       OBTAINED: `2020.06.15`,
     },
+    {
+      NAME: `DFT`,
+      OBTAINED: `2020.07.08`,
+    },
     ],
     PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
   },
@@ -241,6 +256,12 @@ const Warriors = {
       },
       {
         REASON: `Refused to go ZG speedrun at 2020.06.11`,
+        ASSIGNED: `2020.06.11`,
+        DURATION: 30, // days
+        VALUE: 1.5, // multiplier to final GearScore
+      },
+      {
+        REASON: `Used recklessness on vaelastrasz instead of firemaw during BWL speedrun 2020.07.08`,
         ASSIGNED: `2020.06.11`,
         DURATION: 30, // days
         VALUE: 1.5, // multiplier to final GearScore
@@ -554,31 +575,31 @@ const Warriors = {
     PERSONAL_MOD: 1.0, // based on warcraftlogs perfomance - the better you do the less coeff is
   },
 
-  Savante: {
-    NAME: `Savante`,
-    RANK: `Tank`,
-    NOTE: `Dwarf, has Edgemasters`,
-    PENALTIES: [{
-      REASON: `No Flask while BWL speedrun`,
-      ASSIGNED: `2020.05.07`,
-      DURATION: 15, // days
-      VALUE: 1.5, // multiplier to final GearScore
-    },
-    {
-      REASON: `Didnt have Rends buff during BWL speed run`,
-      ASSIGNED: `2020.07.06`,
-      DURATION: 21, // days
-      VALUE: 1.5, // multiplier to final GearScore
-    },
-    ],
-    GEAR: [
-      {
-        NAME: `OG`,
-        OBTAINED: `2020.06.10`,
-      },
-    ],
-    PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
-  },
+  // Savante: {
+  //   NAME: `Savante`,
+  //   RANK: `Tank`,
+  //   NOTE: `Dwarf, has Edgemasters`,
+  //   PENALTIES: [{
+  //     REASON: `No Flask while BWL speedrun`,
+  //     ASSIGNED: `2020.05.07`,
+  //     DURATION: 15, // days
+  //     VALUE: 1.5, // multiplier to final GearScore
+  //   },
+  //   {
+  //     REASON: `Didnt have Rends buff during BWL speed run`,
+  //     ASSIGNED: `2020.07.06`,
+  //     DURATION: 21, // days
+  //     VALUE: 1.5, // multiplier to final GearScore
+  //   },
+  //   ],
+  //   GEAR: [
+  //     {
+  //       NAME: `OG`,
+  //       OBTAINED: `2020.06.10`,
+  //     },
+  //   ],
+  //   PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
+  // },
 
   Legabis: {
     NAME: `Legabis`,
@@ -592,6 +613,12 @@ const Warriors = {
     },
     {
       REASON: `No sunders on BWL bosses during speedrun 2020.06.08`,
+      ASSIGNED: `2020.06.08`,
+      DURATION: 14, // days
+      VALUE: 1.5, // multiplier to final GearScore
+    },
+    {
+      REASON: `No flask during BWL speed run 2020.07.08`,
       ASSIGNED: `2020.06.08`,
       DURATION: 14, // days
       VALUE: 1.5, // multiplier to final GearScore
@@ -679,12 +706,27 @@ const Warriors = {
     NAME: `Engeven`,
     RANK: `Tank`,
     NOTE: `Human`,
-    PENALTIES: [
+    PENALTIES: [{
+      REASON: `No Flask while BWL speedrun`,
+      ASSIGNED: `2020.05.07`,
+      DURATION: 15, // days
+      VALUE: 1.5, // multiplier to final GearScore
+    },
+    {
+      REASON: `Didnt have Rends buff during BWL speed run`,
+      ASSIGNED: `2020.07.06`,
+      DURATION: 21, // days
+      VALUE: 1.5, // multiplier to final GearScore
+    },
     ],
     GEAR: [
       {
         NAME: `CB`,
         OBTAINED: `2020.07.06`,
+      },
+      {
+        NAME: `DTP`,
+        OBTAINED: `2020.07.08`,
       },
     ],
     PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
