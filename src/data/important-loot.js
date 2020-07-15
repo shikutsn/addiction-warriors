@@ -49,6 +49,16 @@ const DFTowners = [
     OBTAINED: `2020.06.18`,
     CLASS: `warrior`,
   },
+  {
+    NAME: `Elitekoala`,
+    OBTAINED: `2020.07.08`,
+    CLASS: `warrior`,
+  },
+  {
+    NAME: `Zrzazin`,
+    OBTAINED: `2020.07.15`,
+    CLASS: `rogue`,
+  },
 ];
 
 const CTSowners = [
@@ -66,6 +76,11 @@ const CTSowners = [
     NAME: `Elitekoala`,
     OBTAINED: `2020.06.15`,
     CLASS: `warrior`,
+  },
+  {
+    NAME: `Celegon`,
+    OBTAINED: `2020.07.15`,
+    CLASS: `rogue`,
   },
 ];
 

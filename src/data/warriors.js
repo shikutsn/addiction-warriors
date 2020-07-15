@@ -71,6 +71,10 @@ const Warriors = {
       NAME: `FG`,
       OBTAINED: `2020.06.29`,
     },
+    {
+      NAME: `BWR`,
+      OBTAINED: `2020.07.09`,
+    },
     ],
     PERSONAL_MOD: 0.9, // based on warcraftlogs perfomance - the better you do the less coeff is
   },
@@ -170,6 +174,10 @@ const Warriors = {
     {
       NAME: `LFC`,
       OBTAINED: `2020.05.27`,
+    },
+    {
+      NAME: `CB`,
+      OBTAINED: `2020.07.15`,
     },
     ],
     PERSONAL_MOD: 1.4, // based on warcraftlogs perfomance - the better you do the less coeff is
@@ -445,6 +453,10 @@ const Warriors = {
       NAME: `MALA`,
       OBTAINED: `2020.06.24`,
     },
+    {
+      NAME: `SM`,
+      OBTAINED: `2019.10.01`,
+    },
     ],
     PERSONAL_MOD: 1.4, // based on warcraftlogs perfomance - the better you do the less coeff is
   },
@@ -453,7 +465,12 @@ const Warriors = {
     NAME: `Brooks`,
     RANK: `Raider`,
     NOTE: `Human, no Edgemasters`,
-    PENALTIES: [
+    PENALTIES: [{
+      REASON: `No Flask while BWL speedrun (forgot)`,
+      ASSIGNED: `2020.07.15`,
+      DURATION: 15, // days
+      VALUE: 1.5, // multiplier to final GearScore
+    },
     ],
     GEAR: [{
       NAME: `DTP`,
@@ -571,6 +588,14 @@ const Warriors = {
       NAME: `CB`,
       OBTAINED: `2020.07.06`,
     },
+    {
+      NAME: `BWL`,
+      OBTAINED: `2020.07.05`,
+    },
+    {
+      NAME: `SM`,
+      OBTAINED: `2020.07.09`,
+    },
     ],
     PERSONAL_MOD: 1.0, // based on warcraftlogs perfomance - the better you do the less coeff is
   },
@@ -601,64 +626,64 @@ const Warriors = {
   //   PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
   // },
 
-  Legabis: {
-    NAME: `Legabis`,
-    RANK: `Raider`,
-    NOTE: `Elf, has Edgemasters`,
-    PENALTIES: [{
-      REASON: `Didnt show up for 2nd BWL split (spontaneous family visit)`,
-      ASSIGNED: `2020.05.17`,
-      DURATION: 14, // days
-      VALUE: 1.5, // multiplier to final GearScore
-    },
-    {
-      REASON: `No sunders on BWL bosses during speedrun 2020.06.08`,
-      ASSIGNED: `2020.06.08`,
-      DURATION: 14, // days
-      VALUE: 1.5, // multiplier to final GearScore
-    },
-    {
-      REASON: `No flask during BWL speed run 2020.07.08`,
-      ASSIGNED: `2020.06.08`,
-      DURATION: 14, // days
-      VALUE: 1.5, // multiplier to final GearScore
-    },
-    ],
-    GEAR: [{
-      NAME: `DTP`,
-      OBTAINED: `2019.10.01`,
-    },
-    {
-      NAME: `OG`,
-      OBTAINED: `2019.10.01`,
-    },
-    {
-      NAME: `WS`,
-      OBTAINED: `2019.10.01`,
-    },
-    {
-      NAME: `DB`,
-      OBTAINED: `2019.10.01`,
-    },
-    {
-      NAME: `CRUL`,
-      OBTAINED: `2019.10.01`,
-    },
-    {
-      NAME: `PB`,
-      OBTAINED: `2019.10.01`,
-    },
-    {
-      NAME: `SM`,
-      OBTAINED: `2020.06.01`,
-    },
-    {
-      NAME: `QSR`,
-      OBTAINED: `2020.06.29`,
-    },
-    ],
-    PERSONAL_MOD: 1.0, // based on warcraftlogs perfomance - the better you do the less coeff is
-  },
+  // Legabis: {
+  //   NAME: `Legabis`,
+  //   RANK: `Raider`,
+  //   NOTE: `Elf, has Edgemasters`,
+  //   PENALTIES: [{
+  //     REASON: `Didnt show up for 2nd BWL split (spontaneous family visit)`,
+  //     ASSIGNED: `2020.05.17`,
+  //     DURATION: 14, // days
+  //     VALUE: 1.5, // multiplier to final GearScore
+  //   },
+  //   {
+  //     REASON: `No sunders on BWL bosses during speedrun 2020.06.08`,
+  //     ASSIGNED: `2020.06.08`,
+  //     DURATION: 14, // days
+  //     VALUE: 1.5, // multiplier to final GearScore
+  //   },
+  //   {
+  //     REASON: `No flask during BWL speed run 2020.07.08`,
+  //     ASSIGNED: `2020.06.08`,
+  //     DURATION: 14, // days
+  //     VALUE: 1.5, // multiplier to final GearScore
+  //   },
+  //   ],
+  //   GEAR: [{
+  //     NAME: `DTP`,
+  //     OBTAINED: `2019.10.01`,
+  //   },
+  //   {
+  //     NAME: `OG`,
+  //     OBTAINED: `2019.10.01`,
+  //   },
+  //   {
+  //     NAME: `WS`,
+  //     OBTAINED: `2019.10.01`,
+  //   },
+  //   {
+  //     NAME: `DB`,
+  //     OBTAINED: `2019.10.01`,
+  //   },
+  //   {
+  //     NAME: `CRUL`,
+  //     OBTAINED: `2019.10.01`,
+  //   },
+  //   {
+  //     NAME: `PB`,
+  //     OBTAINED: `2019.10.01`,
+  //   },
+  //   {
+  //     NAME: `SM`,
+  //     OBTAINED: `2020.06.01`,
+  //   },
+  //   {
+  //     NAME: `QSR`,
+  //     OBTAINED: `2020.06.29`,
+  //   },
+  //   ],
+  //   PERSONAL_MOD: 1.0, // based on warcraftlogs perfomance - the better you do the less coeff is
+  // },
 
   Everyday: {
     NAME: `Everyday`,
@@ -731,6 +756,38 @@ const Warriors = {
     ],
     PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
   },
+
+  Byratanks: {
+    NAME: `Byratanks`,
+    RANK: `Trial`,
+    NOTE: `Human`,
+    PENALTIES: [
+    ],
+    GEAR: [
+      {
+        NAME: `OG`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `WS`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `VIS`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `FG`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `CAF`,
+        OBTAINED: `2019.10.01`,
+      },
+    ],
+    PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
+  },
+
 };
 
 export {Warriors};
