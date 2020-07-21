@@ -596,6 +596,10 @@ const Warriors = {
       NAME: `SM`,
       OBTAINED: `2020.07.09`,
     },
+    {
+      NAME: `OG`,
+      OBTAINED: `2020.07.20`,
+    },
     ],
     PERSONAL_MOD: 1.0, // based on warcraftlogs perfomance - the better you do the less coeff is
   },
@@ -687,7 +691,7 @@ const Warriors = {
 
   Everyday: {
     NAME: `Everyday`,
-    RANK: `Trial`,
+    RANK: `Raider`,
     NOTE: `Human`,
     PENALTIES: [
     ],
@@ -759,7 +763,7 @@ const Warriors = {
 
   Byratanks: {
     NAME: `Byratanks`,
-    RANK: `Trial`,
+    RANK: `Raider`,
     NOTE: `Human`,
     PENALTIES: [
     ],
@@ -784,9 +788,33 @@ const Warriors = {
         NAME: `CAF`,
         OBTAINED: `2019.10.01`,
       },
+      {
+        NAME: `BB`,
+        OBTAINED: `2020.07.20`,
+      },
+      {
+        NAME: `QSR`,
+        OBTAINED: `2020.07.20`,
+      },
     ],
     PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
   },
+
+  Secara: {
+    NAME: `Secara`,
+    RANK: `Trial`,
+    NOTE: `Human`,
+    PENALTIES: [
+    ],
+    GEAR: [
+      {
+        NAME: `CAF`,
+        OBTAINED: `2019.10.01`,
+      },
+    ],
+    PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
+  },
+
 
 };
 
