@@ -808,15 +808,34 @@ const Warriors = {
     PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
   },
 
-  Secara: {
-    NAME: `Secara`,
+  // Secara: {
+  //   NAME: `Secara`,
+  //   RANK: `Trial`,
+  //   NOTE: `Human`,
+  //   PENALTIES: [
+  //   ],
+  //   GEAR: [
+  //     {
+  //       NAME: `CAF`,
+  //       OBTAINED: `2019.10.01`,
+  //     },
+  //   ],
+  //   PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
+  // },
+
+  Skagge: {
+    NAME: `Skagge`,
     RANK: `Trial`,
     NOTE: `Human`,
     PENALTIES: [
     ],
     GEAR: [
       {
-        NAME: `CAF`,
+        NAME: `OG`,
+        OBTAINED: `2020.07.27`,
+      },
+      {
+        NAME: `SM`,
         OBTAINED: `2019.10.01`,
       },
     ],
