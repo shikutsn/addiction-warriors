@@ -735,39 +735,43 @@ const Warriors = {
       NAME: `CF`,
       OBTAINED: `2019.10.01`,
     },
+    {
+      NAME: `OG`,
+      OBTAINED: `2020.08.03`,
+    },
     ],
     PERSONAL_MOD: 1.0, // based on warcraftlogs perfomance - the better you do the less coeff is
   },
 
-  Engeven: {
-    NAME: `Engeven`,
-    RANK: `Tank`,
-    NOTE: `Human`,
-    PENALTIES: [{
-      REASON: `No Flask while BWL speedrun`,
-      ASSIGNED: `2020.05.07`,
-      DURATION: 15, // days
-      VALUE: 1.5, // multiplier to final GearScore
-    },
-    {
-      REASON: `Didnt have Rends buff during BWL speed run`,
-      ASSIGNED: `2020.07.06`,
-      DURATION: 21, // days
-      VALUE: 1.5, // multiplier to final GearScore
-    },
-    ],
-    GEAR: [
-      {
-        NAME: `CB`,
-        OBTAINED: `2020.07.06`,
-      },
-      {
-        NAME: `DTP`,
-        OBTAINED: `2020.07.08`,
-      },
-    ],
-    PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
-  },
+  // Engeven: {
+  //   NAME: `Engeven`,
+  //   RANK: `Tank`,
+  //   NOTE: `Human`,
+  //   PENALTIES: [{
+  //     REASON: `No Flask while BWL speedrun`,
+  //     ASSIGNED: `2020.05.07`,
+  //     DURATION: 15, // days
+  //     VALUE: 1.5, // multiplier to final GearScore
+  //   },
+  //   {
+  //     REASON: `Didnt have Rends buff during BWL speed run`,
+  //     ASSIGNED: `2020.07.06`,
+  //     DURATION: 21, // days
+  //     VALUE: 1.5, // multiplier to final GearScore
+  //   },
+  //   ],
+  //   GEAR: [
+  //     {
+  //       NAME: `CB`,
+  //       OBTAINED: `2020.07.06`,
+  //     },
+  //     {
+  //       NAME: `DTP`,
+  //       OBTAINED: `2020.07.08`,
+  //     },
+  //   ],
+  //   PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
+  // },
 
   Byratanks: {
     NAME: `Byratanks`,
