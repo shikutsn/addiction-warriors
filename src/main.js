@@ -1,6 +1,6 @@
 import {getDaysPassed} from "./utils/common.js";
 import {createElement} from "./utils/render.js";
-import {Gear, McLoot, BwlLoot} from "./data/loot-base.js";
+import {Gear, McLoot, BwlLoot, AqLoot} from "./data/loot-base.js";
 import {Warriors} from "./data/warriors.js";
 import {DFTowners, CTSowners, SMowners} from "./data/important-loot.js";
 
@@ -267,7 +267,7 @@ const getOwnersTemplate = (dft, cts, sm) => {
 
 // ----------------------------------------------
 const doesWarriorHasItem = (warrior, itemToCheck) => {
-  // returns true if warrior has an items
+  // returns true if warrior has an item
   return !!warrior.GEAR.find((it) => it.NAME === itemToCheck);
 };
 
@@ -285,11 +285,14 @@ const getMissingItemMarkup = (warriors, currentItem) => {
   return `<li class="missing-loot-list__item"><a href="${Gear[currentItem].LINK}"></a>: ${names.join(`, `)}</li>`;
 };
 
-const getMissingItemsTemplate = (warriors, mcLoot, bwlLoot) => {
+const getMissingItemsTemplate = (warriors, mcLoot, bwlLoot, aqLoot) => {
   const mcMissingLootMarkup = mcLoot.map((it) => {
     return getMissingItemMarkup(warriors, it);
   }).join(`\n`);
-  const bwlWarriorsMarkup = bwlLoot.map((it) => {
+  const bwlMissingLootMarkup = bwlLoot.map((it) => {
+    return getMissingItemMarkup(warriors, it);
+  }).join(`\n`);
+  const aqMissingLootMarkup = aqLoot.map((it) => {
     return getMissingItemMarkup(warriors, it);
   }).join(`\n`);
 
@@ -302,9 +305,58 @@ const getMissingItemsTemplate = (warriors, mcLoot, bwlLoot) => {
           </ul>
       </article>
       <article class="missing-loot-list__bwl">
-        <h2 class="missing-loot-list__bwl-caption">Missing BWL loot</h2>
+        <h2 class="missing-loot-list__bwl-caption">Missing BWL loot:</h2>
           <ul class="missing-loot-list__list missing-loot-list__bwl">
-            ${bwlWarriorsMarkup}
+            ${bwlMissingLootMarkup}
+          </ul>
+      </article>
+      <article class="missing-loot-list__aq">
+        <h2 class="missing-loot-list__aq-caption">Missing AQ40 loot:</h2>
+          <ul class="missing-loot-list__list missing-loot-list__aq">
+            ${aqMissingLootMarkup}
+          </ul>
+      </article>
+    </section>`
+  );
+};
+
+const getAqLootedItemsTemplate = (warriors, aqLoot) => {
+  // TODO fix markup cuz now its quick patch right after aq40 release
+  // const aqLootedItems = aqLoot.map((it) => {
+  //   return getMissingItemMarkup(warriors, it);
+  // }).join(`\n`);
+
+  const aqLootedItems = warriors.slice().
+    forEach((warrior) => {
+      warrior.GEAR.slice().forEach((it) => {
+        aqLoot.slice().forEach((item) => {
+          if (item.NAME === it.NAME) {
+            console.log(`aq40 item!`)
+          }
+        })
+        if (it.NAME === `BC`) {
+          console.log(`koala?`)
+          console.log(warrior);
+        }
+      })
+
+      console.log(warrior.GEAR[0].NAME)
+      if (warrior.GEAR.NAME === `BC`) {
+
+      console.log(warrior.NAME);
+    }
+    });
+  // GEAR.slice()
+  //   .sort((a, b) => getDaysPassed(a.OBTAINED) - getDaysPassed(b.OBTAINED))
+  //   .map((it) => `<li class="warrior__gearitem"><a href="${Gear[it.NAME].LINK}"></a> <span class="warrior__gearitemscore">[${Gear[it.NAME].VALUE}]</span> <span class="warrior__gearitemdays">${getDaysPassed(it.OBTAINED)}</span> day(s) ago</li>`)
+  //   .join(`\n`);
+
+  return (
+    `<section class="missing-loot-list">
+      <article class="missing-loot-list__aq">
+        <h2 class="missing-loot-list__aq-caption">AQ40 looted items:</h2>
+          <ul class="missing-loot-list__list missing-loot-list__aq">
+            ${aqLootedItems}
           </ul>
       </article>
     </section>`
@@ -315,7 +367,8 @@ const getMissingItemsTemplate = (warriors, mcLoot, bwlLoot) => {
 const mainElement = document.querySelector(`.main`);
 
 mainElement.append(createElement(getOwnersTemplate(DFTowners, CTSowners, SMowners)));
-mainElement.append(createElement(getMissingItemsTemplate(sortedWarriors, McLoot, BwlLoot)));
+mainElement.append(createElement(getMissingItemsTemplate(sortedWarriors, McLoot, BwlLoot, AqLoot)));
+mainElement.append(createElement(getAqLootedItemsTemplate(sortedWarriors, AqLoot)));
 renderWarriors(sortedWarriors);
 
 // const tmp = getMissingItemsTemplate(Warriors, McLoot, BwlLoot);

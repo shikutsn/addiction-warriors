@@ -131,11 +131,88 @@ const Gear = {
     LINK: `https://classic.wowhead.com/item=18564/bindings-of-the-windseeker`,
     VALUE: 60,
   },
+  // AQ40
+  CCH: {
+    NAME: `Cloak of Concentrated Hatred`,
+    LINK: `https://classic.wowhead.com/item=21701/cloak-of-concentrated-hatred`,
+    VALUE: 30,
+  },
+  BA: {
+    NAME: `Breastplate of Annihilation`,
+    LINK: `https://classic.wowhead.com/item=21814/breastplate-of-annihilation`,
+    VALUE: 60,
+  },
+  BS: {
+    NAME: `Badge of the Swarmguard`,
+    LINK: `https://classic.wowhead.com/item=21670/badge-of-the-swarmguard`,
+    VALUE: 10,
+  },
+  IQA: {
+    NAME: `Imperial Qiraji Armaments`,
+    LINK: `https://classic.wowhead.com/item=21232/imperial-qiraji-armaments`,
+    VALUE: 25,
+  },
+  BC: {
+    NAME: `Barbed Choker`,
+    LINK: `https://classic.wowhead.com/item=21664/barbed-choker`,
+    VALUE: 30,
+  },
+  AQR: {
+    NAME: `Ancient Qiraji Ripper`,
+    LINK: `https://classic.wowhead.com/item=21650/ancient-qiraji-ripper`,
+    VALUE: 100,
+  },
+  HDW: {
+    NAME: `Hive Defiler Wristguards`,
+    LINK: `https://classic.wowhead.com/item=21618/hive-defiler-wristguards`,
+    VALUE: 40,
+  },
+  GA: {
+    NAME: `Gauntlets of Annihilation`,
+    LINK: `https://classic.wowhead.com/item=21581/gauntlets-of-annihilation`,
+    VALUE: 75,
+  },
+  RQF: {
+    NAME: `Ring of the Qiraji Fury`,
+    LINK: `https://classic.wowhead.com/item=21677/ring-of-the-qiraji-fury`,
+    VALUE: 30,
+  },
+  LGW: {
+    NAME: `Larvae of the Great Worm`,
+    LINK: `https://classic.wowhead.com/item=23557/larvae-of-the-great-worm`,
+    VALUE: 35,
+  },
+  JG: {
+    NAME: `Jom Gabbar`,
+    LINK: `https://classic.wowhead.com/item=23570/jom-gabbar`,
+    VALUE: 40,
+  },
+  CQS: {
+    NAME: `Conqueror's Spaulders`,
+    LINK: `https://classic.wowhead.com/item=21330/conquerors-spaulders`,
+    VALUE: 35,
+  },
+  CQL: {
+    NAME: `Conqueror's Legguards`,
+    LINK: `https://classic.wowhead.com/item=21332/conquerors-legguards`,
+    VALUE: 35,
+  },
+  CQB: {
+    NAME: `Conqueror's Breastplate`,
+    LINK: `https://classic.wowhead.com/item=21331/conquerors-breastplate`,
+    VALUE: 30,
+  },
+  CQC: {
+    NAME: `Conqueror's Crown`,
+    LINK: `https://classic.wowhead.com/item=21329/conquerors-crown`,
+    VALUE: 20,
+  },
   DUMMY: {
     NAME: ``,
     LINK: ``,
     VALUE: 0,
   },
+
   // TODO check that values of offhands are about the same.
   // TODO BRE, SPINAL REAPER?
 };
@@ -144,4 +221,6 @@ const McLoot = [`QSR`, `WS`, `FG`, `OG`, `SM`, `BB`];
 
 const BwlLoot = [`CTS`, `DFT`, `CB`, `CAF`, `LFC`, `CDM`, `MALA`, `DTP`, `CRUL`];
 
-export {Gear, McLoot, BwlLoot};
+const AqLoot = [`CCH`, `BA`, `BS`, `IQA`, `BC`, `AQR`, `HDW`, `GA`, `RQF`, `LGW`, `JG`, `CQS`, `CQL`, `CQB`, `CQC`];
+
+export {Gear, McLoot, BwlLoot, AqLoot};
