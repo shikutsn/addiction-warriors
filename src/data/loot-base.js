@@ -223,4 +223,6 @@ const BwlLoot = [`CTS`, `DFT`, `CB`, `CAF`, `LFC`, `CDM`, `MALA`, `DTP`, `CRUL`]
 
 const AqLoot = [`CCH`, `BA`, `BS`, `IQA`, `BC`, `AQR`, `HDW`, `GA`, `RQF`, `LGW`, `JG`, `CQS`, `CQL`, `CQB`, `CQC`];
 
-export {Gear, McLoot, BwlLoot, AqLoot};
+const AqSet = [`CQS`, `CQL`, `CQB`, `CQC`];
+
+export {Gear, McLoot, BwlLoot, AqLoot, AqSet};

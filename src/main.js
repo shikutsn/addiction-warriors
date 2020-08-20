@@ -1,6 +1,6 @@
 import {getDaysPassed} from "./utils/common.js";
 import {createElement} from "./utils/render.js";
-import {Gear, McLoot, BwlLoot, AqLoot} from "./data/loot-base.js";
+import {Gear, McLoot, BwlLoot, AqLoot, AqSet} from "./data/loot-base.js";
 import {Warriors} from "./data/warriors.js";
 import {DFTowners, CTSowners, SMowners} from "./data/important-loot.js";
 
@@ -320,40 +320,53 @@ const getMissingItemsTemplate = (warriors, mcLoot, bwlLoot, aqLoot) => {
   );
 };
 
-const getAqLootedItemsTemplate = (warriors, aqLoot) => {
+const getAqLootedItemsTemplate = (warriors, aqLoot, aqSet) => {
   // TODO fix markup cuz now its quick patch right after aq40 release
-  // const aqLootedItems = aqLoot.map((it) => {
-  //   return getMissingItemMarkup(warriors, it);
-  // }).join(`\n`);
+  let warrs = [];
 
-  const aqLootedItems = warriors.slice().
+  warriors.slice().
     forEach((warrior) => {
+      let curSet = 0;
+      let curNonSet = 0;
+
       warrior.GEAR.slice().forEach((it) => {
-        aqLoot.slice().forEach((item) => {
-          if (item.NAME === it.NAME) {
-            console.log(`aq40 item!`)
+        // aqLoot.slice().forEach((item) => {
+        //   if (item.NAME === it.NAME) {
+        //     console.log(`aq40 item!`);
+        //   }
+        // });
+        // console.log(warrior.NAME + ` has: ` + it.NAME);
+        let curItem = aqLoot.find((curIt) => curIt === it.NAME);
+        if (curItem) {
+          curNonSet++;
+          if (aqSet.find((curIt) => curIt === curItem)) {
+            curNonSet--;
+            curSet++;
           }
-        })
-        if (it.NAME === `BC`) {
-          console.log(`koala?`)
-          console.log(warrior);
         }
-      })
-
-      console.log(warrior.GEAR[0].NAME)
-      if (warrior.GEAR.NAME === `BC`) {
-
-      console.log(warrior.NAME);
-    }
+      });
+      // console.log(`for ` + warrior.NAME + ` ` + curNonSet + ` non set item(s) found and ` + curSet + ` set item(s) found`);
+      warrs.push({NAME: warrior.NAME, SET: curSet, NONSET: curNonSet});
     });
-  // GEAR.slice()
-  //   .sort((a, b) => getDaysPassed(a.OBTAINED) - getDaysPassed(b.OBTAINED))
-  //   .map((it) => `<li class="warrior__gearitem"><a href="${Gear[it.NAME].LINK}"></a> <span class="warrior__gearitemscore">[${Gear[it.NAME].VALUE}]</span> <span class="warrior__gearitemdays">${getDaysPassed(it.OBTAINED)}</span> day(s) ago</li>`)
-  //   .join(`\n`);
+
+  // sorting by name and then by amount of nonset items
+  warrs.sort((a, b) => {
+    if (a.NAME > b.NAME) {
+      return 1;
+    } else if (a.NAME === b.NAME) {
+      return 0;
+    }
+    return -1;
+  }).sort((a, b) => b.NONSET - a.NONSET);
+  // console.log(warrs);
+
+  const aqLootedItems = warrs.map((it) => `<li class="warrior__gearitem">
+    <span class="important-loot-list__warrior-name">${it.NAME}:</span> <span class="warrior__gearitemscore">NONSET = ${it.NONSET},</span> set = ${it.SET}</li>`)
+    .join(`\n`);
 
   return (
     `<section class="missing-loot-list">
-      <article class="missing-loot-list__aq">
+      <article class="missing-loot-list__aq-looted">
         <h2 class="missing-loot-list__aq-caption">AQ40 looted items:</h2>
           <ul class="missing-loot-list__list missing-loot-list__aq">
             ${aqLootedItems}
@@ -368,7 +381,7 @@ const mainElement = document.querySelector(`.main`);
 
 mainElement.append(createElement(getOwnersTemplate(DFTowners, CTSowners, SMowners)));
 mainElement.append(createElement(getMissingItemsTemplate(sortedWarriors, McLoot, BwlLoot, AqLoot)));
-mainElement.append(createElement(getAqLootedItemsTemplate(sortedWarriors, AqLoot)));
+mainElement.append(createElement(getAqLootedItemsTemplate(sortedWarriors, AqLoot, AqSet)));
 renderWarriors(sortedWarriors);
 
 // const tmp = getMissingItemsTemplate(Warriors, McLoot, BwlLoot);

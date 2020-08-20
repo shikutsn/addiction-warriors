@@ -1170,6 +1170,11 @@ button {
   width: 50%;
 }
 
+
+.missing-loot-list__aq-looted {
+  width: 100%;
+}
+
 .important-loot-list__container {
   display: flex;
   border-right: solid 2px #31353f;
