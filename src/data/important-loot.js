@@ -69,6 +69,11 @@ const DFTowners = [
     OBTAINED: `2020.08.10`,
     CLASS: `warrior`,
   },
+  {
+    NAME: `Cynil`,
+    OBTAINED: `2020.08.15`,
+    CLASS: `rogue`,
+  },
 ];
 
 const CTSowners = [

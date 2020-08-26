@@ -452,6 +452,10 @@ const Warriors = {
       NAME: `MALA`,
       OBTAINED: `2020.08.24`,
     },
+    {
+      NAME: `CQS`,
+      OBTAINED: `2020.08.26`,
+    },
     ],
     PERSONAL_MOD: 1.4, // based on warcraftlogs perfomance - the better you do the less coeff is
   },
@@ -683,6 +687,10 @@ const Warriors = {
       NAME: `MALA`,
       OBTAINED: `2020.08.24`,
     },
+    {
+      NAME: `CQL`,
+      OBTAINED: `2020.08.26`,
+    },
     ],
     PERSONAL_MOD: 1.0, // based on warcraftlogs perfomance - the better you do the less coeff is
   },
@@ -887,6 +895,10 @@ const Warriors = {
         NAME: `GA`,
         OBTAINED: `2020.08.17`,
       },
+      {
+        NAME: `CQS`,
+        OBTAINED: `2020.08.28`,
+      },
     ],
     PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
   },
@@ -920,6 +932,36 @@ const Warriors = {
       {
         NAME: `SM`,
         OBTAINED: `2019.10.01`,
+      },
+    ],
+    PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
+  },
+
+  Insanity: {
+    NAME: `Insanity`,
+    RANK: `Trial`,
+    NOTE: `Human`,
+    PENALTIES: [
+    ],
+    GEAR: [
+      {
+        NAME: `CQS`,
+        OBTAINED: `2020.08.26`,
+      },
+    ],
+    PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
+  },
+
+  Roswan: {
+    NAME: `Roswan`,
+    RANK: `Trial`,
+    NOTE: `Human`,
+    PENALTIES: [
+    ],
+    GEAR: [
+      {
+        NAME: `CQB`,
+        OBTAINED: `2020.08.26`,
       },
     ],
     PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
