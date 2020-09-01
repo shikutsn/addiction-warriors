@@ -187,6 +187,11 @@ const Gear = {
     LINK: `https://classic.wowhead.com/item=23570/jom-gabbar`,
     VALUE: 40,
   },
+  BFH: {
+    NAME: `Boots of the Fallen Hero`,
+    LINK: `https://classic.wowhead.com/item=21688/boots-of-the-fallen-hero`,
+    VALUE: 25,
+  },
   CQS: {
     NAME: `Conqueror's Spaulders`,
     LINK: `https://classic.wowhead.com/item=21330/conquerors-spaulders`,
@@ -221,7 +226,7 @@ const McLoot = [`QSR`, `WS`, `FG`, `OG`, `SM`, `BB`];
 
 const BwlLoot = [`CTS`, `DFT`, `CB`, `CAF`, `LFC`, `CDM`, `MALA`, `DTP`, `CRUL`];
 
-const AqLoot = [`CCH`, `BA`, `BS`, `IQA`, `BC`, `AQR`, `HDW`, `GA`, `RQF`, `LGW`, `JG`, `CQS`, `CQL`, `CQB`, `CQC`];
+const AqLoot = [`CCH`, `BA`, `BS`, `IQA`, `BC`, `AQR`, `HDW`, `GA`, `RQF`, `LGW`, `JG`, `BFH`, `CQS`, `CQL`, `CQB`, `CQC`];
 
 const AqSet = [`CQS`, `CQL`, `CQB`, `CQC`];
 
