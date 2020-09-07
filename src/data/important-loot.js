@@ -107,6 +107,11 @@ const CTSowners = [
     OBTAINED: `2020.02.14`,
     CLASS: `warrior`,
   },
+  {
+    NAME: `Byratanks`,
+    OBTAINED: `2020.09.07`,
+    CLASS: `warrior`,
+  },
 ];
 
 const SMowners = [
