@@ -1303,6 +1303,78 @@ const Warriors = {
     PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
   },
 
+  Sothatmeans: {
+    NAME: `Sothatmeans`,
+    RANK: `Trial`,
+    NOTE: `Human`,
+    PENALTIES: [
+    ],
+    GEAR: [
+
+      {
+        NAME: `MALA`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `VIS`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `OG`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `GA`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `CAF`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `BL`,
+        OBTAINED: `2019.10.01`,
+      },
+    ],
+    PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
+  },
+
+  Kenux: {
+    NAME: `Kenux`,
+    RANK: `Trial`,
+    NOTE: `Human`,
+    PENALTIES: [
+    ],
+    GEAR: [
+
+      {
+        NAME: `DTP`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `MALA`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `OG`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `CB`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `FG`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `QSR`,
+        OBTAINED: `2019.10.01`,
+      },
+    ],
+    PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
+  },
+
 };
 
 export {Warriors};
