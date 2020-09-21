@@ -74,6 +74,11 @@ const DFTowners = [
     OBTAINED: `2020.08.15`,
     CLASS: `rogue`,
   },
+  {
+    NAME: `Sintrix`,
+    OBTAINED: `2020.09.21`,
+    CLASS: `warrior`,
+  },
 ];
 
 const CTSowners = [
@@ -111,6 +116,11 @@ const CTSowners = [
     NAME: `Byratanks`,
     OBTAINED: `2020.09.07`,
     CLASS: `warrior`,
+  },
+  {
+    NAME: `Zrzazin`,
+    OBTAINED: `2020.09.21`,
+    CLASS: `rogue`,
   },
 ];
 

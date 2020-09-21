@@ -99,6 +99,10 @@ const Warriors = {
       NAME: `CQC`,
       OBTAINED: `2020.09.17`,
     },
+    {
+      NAME: `DFT`,
+      OBTAINED: `2020.09.21`,
+    },
     ],
     PERSONAL_MOD: 0.9, // based on warcraftlogs perfomance - the better you do the less coeff is
   },
