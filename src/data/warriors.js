@@ -775,6 +775,10 @@ const Warriors = {
       NAME: `CQB`,
       OBTAINED: `2020.09.17`,
     },
+    {
+      NAME: `QSR`,
+      OBTAINED: `2020.09.30`,
+    },
     ],
     PERSONAL_MOD: 1.0, // based on warcraftlogs perfomance - the better you do the less coeff is
   },
@@ -1331,41 +1335,41 @@ const Warriors = {
     PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
   },
 
-  Sothatmeans: {
-    NAME: `Sothatmeans`,
-    RANK: `Trial`,
-    NOTE: `Human`,
-    PENALTIES: [
-    ],
-    GEAR: [
-
-      {
-        NAME: `MALA`,
-        OBTAINED: `2019.10.01`,
-      },
-      {
-        NAME: `VIS`,
-        OBTAINED: `2019.10.01`,
-      },
-      {
-        NAME: `OG`,
-        OBTAINED: `2019.10.01`,
-      },
-      {
-        NAME: `GA`,
-        OBTAINED: `2019.10.01`,
-      },
-      {
-        NAME: `CAF`,
-        OBTAINED: `2019.10.01`,
-      },
-      {
-        NAME: `BL`,
-        OBTAINED: `2019.10.01`,
-      },
-    ],
-    PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
-  },
+  // Sothatmeans: {
+  //   NAME: `Sothatmeans`,
+  //   RANK: `Trial`,
+  //   NOTE: `Human`,
+  //   PENALTIES: [
+  //   ],
+  //   GEAR: [
+  //
+  //     {
+  //       NAME: `MALA`,
+  //       OBTAINED: `2019.10.01`,
+  //     },
+  //     {
+  //       NAME: `VIS`,
+  //       OBTAINED: `2019.10.01`,
+  //     },
+  //     {
+  //       NAME: `OG`,
+  //       OBTAINED: `2019.10.01`,
+  //     },
+  //     {
+  //       NAME: `GA`,
+  //       OBTAINED: `2019.10.01`,
+  //     },
+  //     {
+  //       NAME: `CAF`,
+  //       OBTAINED: `2019.10.01`,
+  //     },
+  //     {
+  //       NAME: `BL`,
+  //       OBTAINED: `2019.10.01`,
+  //     },
+  //   ],
+  //   PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
+  // },
 
   Kenux: {
     NAME: `Kenux`,
