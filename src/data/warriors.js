@@ -103,6 +103,10 @@ const Warriors = {
       NAME: `DFT`,
       OBTAINED: `2020.09.21`,
     },
+    {
+      NAME: `BS`,
+      OBTAINED: `2020.10.05`,
+    },
     ],
     PERSONAL_MOD: 0.9, // based on warcraftlogs perfomance - the better you do the less coeff is
   },
@@ -1003,6 +1007,14 @@ const Warriors = {
         NAME: `CTS`,
         OBTAINED: `2020.09.07`,
       },
+      {
+        NAME: `BC`,
+        OBTAINED: `2020.10.05`,
+      },
+      {
+        NAME: `CQC`,
+        OBTAINED: `2020.10.05`,
+      },
     ],
     PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
   },
@@ -1407,6 +1419,23 @@ const Warriors = {
         NAME: `CQS`,
         OBTAINED: `2019.10.01`,
       },
+    ],
+    PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
+  },
+
+  Darthdumle: {
+    NAME: `Darthdumle`,
+    RANK: `Trial`,
+    NOTE: `Human`,
+    PENALTIES: [
+    ],
+    GEAR: [
+
+      {
+        NAME: `BFH`,
+        OBTAINED: `2020.10.05`,
+      },
+
     ],
     PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
   },
