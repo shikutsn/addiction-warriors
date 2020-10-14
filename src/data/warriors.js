@@ -18,7 +18,7 @@ const Warriors = {
         REASON: `oversleeping MC splits AGAIN lol`,
         ASSIGNED: `2020.06.29`,
         DURATION: 21, // days
-        VALUE: 1.5, // multiplier to final GearScore
+        VALUE: 1.5, // multiplier to final GearScoreclass
       },
       {
         REASON: `Used recklessness on vaelastrasz instead of firemaw during BWL speedrun 2020.07.08`,
@@ -1027,6 +1027,10 @@ const Warriors = {
         NAME: `CB`,
         OBTAINED: `2020.10.12`,
       },
+      {
+        NAME: `DFT`,
+        OBTAINED: `2020.10.12`,
+      },
     ],
     PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
   },
@@ -1434,6 +1438,10 @@ const Warriors = {
       {
         NAME: `CQS`,
         OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `CQB`,
+        OBTAINED: `2020.10.14`,
       },
     ],
     PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
