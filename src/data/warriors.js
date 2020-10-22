@@ -532,6 +532,10 @@ const Warriors = {
       NAME: `CQC`,
       OBTAINED: `2020.09.09`,
     },
+    {
+      NAME: `CQL`,
+      OBTAINED: `2020.10.22`,
+    },
     ],
     PERSONAL_MOD: 1.4, // based on warcraftlogs perfomance - the better you do the less coeff is
   },
@@ -1300,6 +1304,14 @@ const Warriors = {
         NAME: `HDW`,
         OBTAINED: `2020.10.15`,
       },
+      {
+        NAME: `BS`,
+        OBTAINED: `2020.10.22`,
+      },
+      {
+        NAME: `CQB`,
+        OBTAINED: `2020.10.22`,
+      },
     ],
     PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
   },
@@ -1475,6 +1487,23 @@ const Warriors = {
         NAME: `BFH`,
         OBTAINED: `2020.10.05`,
       },
+
+    ],
+    PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
+  },
+
+  Rykowar: {
+    NAME: `Rykowar`,
+    RANK: `Raider`,
+    NOTE: `Human`,
+    PENALTIES: [
+    ],
+    GEAR: [
+
+      // {
+      //   NAME: `JG`,
+      //   OBTAINED: `2020.10.22`,
+      // },
 
     ],
     PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
