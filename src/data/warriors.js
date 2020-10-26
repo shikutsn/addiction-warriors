@@ -346,6 +346,10 @@ const Warriors = {
       NAME: `LGW`,
       OBTAINED: `2020.09.09`,
     },
+    {
+      NAME: `GA`,
+      OBTAINED: `2020.10.26`,
+    },
     ],
     PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
   },
@@ -695,6 +699,10 @@ const Warriors = {
       NAME: `BA`,
       OBTAINED: `2020.10.21`,
     },
+    {
+      NAME: `HDW`,
+      OBTAINED: `2020.10.21`,
+    },
     ],
     PERSONAL_MOD: 0.5, // based on warcraftlogs perfomance - the better you do the less coeff is
   },
@@ -794,6 +802,14 @@ const Warriors = {
     {
       NAME: `QSR`,
       OBTAINED: `2020.09.30`,
+    },
+    {
+      NAME: `RQF`,
+      OBTAINED: `2020.10.26`,
+    },
+    {
+      NAME: `DFT`,
+      OBTAINED: `2020.10.26`,
     },
     ],
     PERSONAL_MOD: 1.0, // based on warcraftlogs perfomance - the better you do the less coeff is
@@ -1226,32 +1242,32 @@ const Warriors = {
     PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
   },
 
-  Rets: {
-    NAME: `Rets`,
-    RANK: `Raider`,
-    NOTE: `Human`,
-    PENALTIES: [
-    ],
-    GEAR: [
-      {
-        NAME: `QSR`,
-        OBTAINED: `2020.08.31`,
-      },
-      {
-        NAME: `OG`,
-        OBTAINED: `2019.10.01`,
-      },
-      {
-        NAME: `SM`,
-        OBTAINED: `2019.10.01`,
-      },
-      {
-        NAME: `CDM`,
-        OBTAINED: `2020.09.07`,
-      },
-    ],
-    PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
-  },
+  // Rets: {
+  //   NAME: `Rets`,
+  //   RANK: `Raider`,
+  //   NOTE: `Human`,
+  //   PENALTIES: [
+  //   ],
+  //   GEAR: [
+  //     {
+  //       NAME: `QSR`,
+  //       OBTAINED: `2020.08.31`,
+  //     },
+  //     {
+  //       NAME: `OG`,
+  //       OBTAINED: `2019.10.01`,
+  //     },
+  //     {
+  //       NAME: `SM`,
+  //       OBTAINED: `2019.10.01`,
+  //     },
+  //     {
+  //       NAME: `CDM`,
+  //       OBTAINED: `2020.09.07`,
+  //     },
+  //   ],
+  //   PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
+  // },
 
   Kneil: {
     NAME: `Kneil`,
@@ -1363,6 +1379,10 @@ const Warriors = {
         NAME: `CQL`,
         OBTAINED: `2020.09.14`,
       },
+      {
+        NAME: `CQS`,
+        OBTAINED: `2020.09.14`,
+      },
     ],
     PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
   },
@@ -1471,6 +1491,10 @@ const Warriors = {
         NAME: `CQB`,
         OBTAINED: `2020.10.14`,
       },
+      {
+        NAME: `CQL`,
+        OBTAINED: `2020.10.14`,
+      },
     ],
     PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
   },
@@ -1492,6 +1516,255 @@ const Warriors = {
     PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
   },
 
+  Pohseip: {
+    NAME: `Pohseip`,
+    RANK: `Raider`,
+    NOTE: `Human`,
+    PENALTIES: [
+    ],
+    GEAR: [
+
+      {
+        NAME: `CQS`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `BA`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `CQL`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `HDW`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `RQF`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `CDM`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `CTS`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `MALA`,
+        OBTAINED: `2019.10.01`,
+      },
+    ],
+    PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
+  },
+
+  Xipog: {
+    NAME: `Xipog`,
+    RANK: `Raider`,
+    NOTE: `Human`,
+    PENALTIES: [
+    ],
+    GEAR: [
+
+      {
+        NAME: `DTP`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `OG`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `CQL`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `WS`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `FG`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `QSR`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `JG`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `CDM`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `BB`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `SM`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `CQB`,
+        OBTAINED: `2019.10.26`,
+      },
+      {
+        NAME: `CB`,
+        OBTAINED: `2019.10.26`,
+      },
+
+    ],
+    PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
+  },
+
+  Aadrian: {
+    NAME: `Aadrian`,
+    RANK: `Raider`,
+    NOTE: `Elf with edgies`,
+    PENALTIES: [
+    ],
+    GEAR: [
+
+      {
+        NAME: `CQS`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `LFC`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `BFH`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `WS`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `CDM`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `CRUL`,
+        OBTAINED: `2019.10.01`,
+      },
+
+    ],
+    PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
+  },
+
+  Virkan: {
+    NAME: `Virkan`,
+    RANK: `Raider`,
+    NOTE: `Human`,
+    PENALTIES: [
+    ],
+    GEAR: [
+
+      {
+        NAME: `BC`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `CQS`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `CQB`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `OG`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `CQL`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `BFH`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `FG`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `CAF`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `QSR`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `DFT`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `MALA`,
+        OBTAINED: `2019.10.01`,
+      },
+
+    ],
+    PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
+  },
+
+  Zing: {
+    NAME: `Zing`,
+    RANK: `Raider`,
+    NOTE: `Human`,
+    PENALTIES: [
+    ],
+    GEAR: [
+
+      {
+        NAME: `CQS`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `BA`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `CQL`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `BFH`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `CAF`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `QSR`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `BS`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `CTS`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `BB`,
+        OBTAINED: `2019.10.01`,
+      },
+
+    ],
+    PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
+  },
+
+
   Rykowar: {
     NAME: `Rykowar`,
     RANK: `Raider`,
@@ -1500,14 +1773,174 @@ const Warriors = {
     ],
     GEAR: [
 
-      // {
-      //   NAME: `JG`,
-      //   OBTAINED: `2020.10.22`,
-      // },
+      {
+        NAME: `CQS`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `CQB`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `OG`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `CQL`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `HDW`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `GA`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `RQF`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `DFT`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `CTS`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `MALA`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `BL`,
+        OBTAINED: `2019.10.01`,
+      },
 
     ],
     PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
   },
+
+  Plung: {
+    NAME: `Plung`,
+    RANK: `Raider`,
+    NOTE: `Human`,
+    PENALTIES: [
+    ],
+    GEAR: [
+
+      {
+        NAME: `BC`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `CQS`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `OG`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `LFC`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `CB`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `HDW`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `QSR`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `CAF`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `CDM`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `CTS`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `MALA`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `SM`,
+        OBTAINED: `2019.10.01`,
+      },
+
+    ],
+    PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
+  },
+
+  Caarlz: {
+    NAME: `Caarlz`,
+    RANK: `Raider`,
+    NOTE: `Human`,
+    PENALTIES: [
+    ],
+    GEAR: [
+
+      {
+        NAME: `CQS`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `OG`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `LFC`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `CB`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `QSR`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `CAF`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `DFT`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `CDM`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `CTS`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `BB`,
+        OBTAINED: `2019.10.01`,
+      },
+      {
+        NAME: `LGW`,
+        OBTAINED: `2019.10.01`,
+      },
+
+
+    ],
+    PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
+  },
+
 
 };
 
