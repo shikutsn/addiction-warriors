@@ -350,6 +350,10 @@ const Warriors = {
       NAME: `GA`,
       OBTAINED: `2020.10.26`,
     },
+    {
+      NAME: `CAF`,
+      OBTAINED: `2020.10.28`,
+    },
     ],
     PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
   },
@@ -1653,6 +1657,10 @@ const Warriors = {
         NAME: `CRUL`,
         OBTAINED: `2019.10.01`,
       },
+      {
+        NAME: `CQL`,
+        OBTAINED: `2020.10.28`,
+      },
 
     ],
     PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
@@ -1817,7 +1825,10 @@ const Warriors = {
         NAME: `BL`,
         OBTAINED: `2019.10.01`,
       },
-
+      {
+        NAME: `QSR`,
+        OBTAINED: `2019.10.01`,
+      },
     ],
     PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
   },
@@ -1878,7 +1889,14 @@ const Warriors = {
         NAME: `SM`,
         OBTAINED: `2019.10.01`,
       },
-
+      {
+        NAME: `GA`,
+        OBTAINED: `2020.10.28`,
+      },
+      {
+        NAME: `CQB`,
+        OBTAINED: `2020.10.28`,
+      },
     ],
     PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
   },
