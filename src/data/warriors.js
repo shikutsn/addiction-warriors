@@ -1723,54 +1723,54 @@ const Warriors = {
     PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
   },
 
-  Zing: {
-    NAME: `Zing`,
-    RANK: `Raider`,
-    NOTE: `Human`,
-    PENALTIES: [
-    ],
-    GEAR: [
-
-      {
-        NAME: `CQS`,
-        OBTAINED: `2019.10.01`,
-      },
-      {
-        NAME: `BA`,
-        OBTAINED: `2019.10.01`,
-      },
-      {
-        NAME: `CQL`,
-        OBTAINED: `2019.10.01`,
-      },
-      {
-        NAME: `BFH`,
-        OBTAINED: `2019.10.01`,
-      },
-      {
-        NAME: `CAF`,
-        OBTAINED: `2019.10.01`,
-      },
-      {
-        NAME: `QSR`,
-        OBTAINED: `2019.10.01`,
-      },
-      {
-        NAME: `BS`,
-        OBTAINED: `2019.10.01`,
-      },
-      {
-        NAME: `CTS`,
-        OBTAINED: `2019.10.01`,
-      },
-      {
-        NAME: `BB`,
-        OBTAINED: `2019.10.01`,
-      },
-
-    ],
-    PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
-  },
+  // Zing: {
+  //   NAME: `Zing`,
+  //   RANK: `Raider`,
+  //   NOTE: `Human`,
+  //   PENALTIES: [
+  //   ],
+  //   GEAR: [
+  //
+  //     {
+  //       NAME: `CQS`,
+  //       OBTAINED: `2019.10.01`,
+  //     },
+  //     {
+  //       NAME: `BA`,
+  //       OBTAINED: `2019.10.01`,
+  //     },
+  //     {
+  //       NAME: `CQL`,
+  //       OBTAINED: `2019.10.01`,
+  //     },
+  //     {
+  //       NAME: `BFH`,
+  //       OBTAINED: `2019.10.01`,
+  //     },
+  //     {
+  //       NAME: `CAF`,
+  //       OBTAINED: `2019.10.01`,
+  //     },
+  //     {
+  //       NAME: `QSR`,
+  //       OBTAINED: `2019.10.01`,
+  //     },
+  //     {
+  //       NAME: `BS`,
+  //       OBTAINED: `2019.10.01`,
+  //     },
+  //     {
+  //       NAME: `CTS`,
+  //       OBTAINED: `2019.10.01`,
+  //     },
+  //     {
+  //       NAME: `BB`,
+  //       OBTAINED: `2019.10.01`,
+  //     },
+  //
+  //   ],
+  //   PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
+  // },
 
 
   Rykowar: {
