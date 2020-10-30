@@ -1499,6 +1499,10 @@ const Warriors = {
         NAME: `CQL`,
         OBTAINED: `2020.10.14`,
       },
+      {
+        NAME: `HDW`,
+        OBTAINED: `2020.10.29`,
+      },
     ],
     PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
   },
@@ -1614,11 +1618,15 @@ const Warriors = {
       },
       {
         NAME: `CQB`,
-        OBTAINED: `2019.10.26`,
+        OBTAINED: `2020.10.26`,
       },
       {
         NAME: `CB`,
-        OBTAINED: `2019.10.26`,
+        OBTAINED: `2020.10.26`,
+      },
+      {
+        NAME: `LGW`,
+        OBTAINED: `2020.10.29`,
       },
 
     ],
