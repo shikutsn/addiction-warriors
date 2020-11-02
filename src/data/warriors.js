@@ -1564,6 +1564,14 @@ const Warriors = {
         NAME: `MALA`,
         OBTAINED: `2019.10.01`,
       },
+      {
+        NAME: `BS`,
+        OBTAINED: `2020.11.02`,
+      },
+      {
+        NAME: `CB`,
+        OBTAINED: `2020.11.02`,
+      },
     ],
     PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
   },
@@ -1961,8 +1969,25 @@ const Warriors = {
         NAME: `LGW`,
         OBTAINED: `2019.10.01`,
       },
+      {
+        NAME: `CQL`,
+        OBTAINED: `2020.11.02`,
+      },
+    ],
+    PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
+  },
 
-
+  Dascha: {
+    NAME: `Dascha`,
+    RANK: `Raider`,
+    NOTE: `R14`,
+    PENALTIES: [
+    ],
+    GEAR: [
+      {
+        NAME: `CAF`,
+        OBTAINED: `2020.11.02`,
+      },
     ],
     PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
   },
