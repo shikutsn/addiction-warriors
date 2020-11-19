@@ -186,85 +186,85 @@ const Warriors = {
     PERSONAL_MOD: 1.4, // based on warcraftlogs perfomance - the better you do the less coeff is
   },
 
-  Exet: {
-    NAME: `Exet`,
-    RANK: `Raider`,
-    NOTE: `Human, has Edgemasters, doesnt want FG`,
-    PENALTIES: [
-      {
-        REASON: `Didnt have Rends buff during BWL speed run`,
-        ASSIGNED: `2020.07.06`,
-        DURATION: 21, // days
-        VALUE: 1.5, // multiplier to final GearScore
-      },
-    ],
-    GEAR: [{
-      NAME: `VIS`,
-      OBTAINED: `2019.10.01`,
-    },
-    {
-      NAME: `BB`,
-      OBTAINED: `2019.10.01`,
-    },
-    {
-      NAME: `CRUL`,
-      OBTAINED: `2019.10.01`,
-    },
-    {
-      NAME: `QSR`,
-      OBTAINED: `2020.05.11`,
-    },
-    {
-      NAME: `OG`,
-      OBTAINED: `2020.05.11`,
-    },
-    {
-      NAME: `WS`,
-      OBTAINED: `2020.05.13`,
-    },
-    {
-      NAME: `LFC`,
-      OBTAINED: `2020.05.27`,
-    },
-    {
-      NAME: `CB`,
-      OBTAINED: `2020.07.15`,
-    },
-    {
-      NAME: `DFT`,
-      OBTAINED: `2020.08.10`,
-    },
-    {
-      NAME: `LGW`,
-      OBTAINED: `2020.08.17`,
-    },
-    {
-      NAME: `CQS`,
-      OBTAINED: `2020.08.20`,
-    },
-    {
-      NAME: `IQA`,
-      OBTAINED: `2020.08.20`,
-    },
-    {
-      NAME: `CQL`,
-      OBTAINED: `2020.09.02`,
-    },
-    {
-      NAME: `CDM`,
-      OBTAINED: `2020.09.07`,
-    },
-    {
-      NAME: `BA`,
-      OBTAINED: `2020.09.09`,
-    },
-    {
-      NAME: `RQF`,
-      OBTAINED: `2020.09.17`,
-    },
-    ],
-    PERSONAL_MOD: 1.4, // based on warcraftlogs perfomance - the better you do the less coeff is
-  },
+  // Exet: {
+  //   NAME: `Exet`,
+  //   RANK: `Raider`,
+  //   NOTE: `Human, has Edgemasters, doesnt want FG`,
+  //   PENALTIES: [
+  //     {
+  //       REASON: `Didnt have Rends buff during BWL speed run`,
+  //       ASSIGNED: `2020.07.06`,
+  //       DURATION: 21, // days
+  //       VALUE: 1.5, // multiplier to final GearScore
+  //     },
+  //   ],
+  //   GEAR: [{
+  //     NAME: `VIS`,
+  //     OBTAINED: `2019.10.01`,
+  //   },
+  //   {
+  //     NAME: `BB`,
+  //     OBTAINED: `2019.10.01`,
+  //   },
+  //   {
+  //     NAME: `CRUL`,
+  //     OBTAINED: `2019.10.01`,
+  //   },
+  //   {
+  //     NAME: `QSR`,
+  //     OBTAINED: `2020.05.11`,
+  //   },
+  //   {
+  //     NAME: `OG`,
+  //     OBTAINED: `2020.05.11`,
+  //   },
+  //   {
+  //     NAME: `WS`,
+  //     OBTAINED: `2020.05.13`,
+  //   },
+  //   {
+  //     NAME: `LFC`,
+  //     OBTAINED: `2020.05.27`,
+  //   },
+  //   {
+  //     NAME: `CB`,
+  //     OBTAINED: `2020.07.15`,
+  //   },
+  //   {
+  //     NAME: `DFT`,
+  //     OBTAINED: `2020.08.10`,
+  //   },
+  //   {
+  //     NAME: `LGW`,
+  //     OBTAINED: `2020.08.17`,
+  //   },
+  //   {
+  //     NAME: `CQS`,
+  //     OBTAINED: `2020.08.20`,
+  //   },
+  //   {
+  //     NAME: `IQA`,
+  //     OBTAINED: `2020.08.20`,
+  //   },
+  //   {
+  //     NAME: `CQL`,
+  //     OBTAINED: `2020.09.02`,
+  //   },
+  //   {
+  //     NAME: `CDM`,
+  //     OBTAINED: `2020.09.07`,
+  //   },
+  //   {
+  //     NAME: `BA`,
+  //     OBTAINED: `2020.09.09`,
+  //   },
+  //   {
+  //     NAME: `RQF`,
+  //     OBTAINED: `2020.09.17`,
+  //   },
+  //   ],
+  //   PERSONAL_MOD: 1.4, // based on warcraftlogs perfomance - the better you do the less coeff is
+  // },
 
   Elitekoala: {
     NAME: `Elitekoala`,
@@ -362,109 +362,109 @@ const Warriors = {
     PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
   },
 
-  Ilith: {
-    NAME: `Ilith`,
-    RANK: `Raider`,
-    NOTE: `Human, has Edgemasters, wants crul+cts/perd, wants CAF`,
-    PENALTIES: [
-      {
-        REASON: `No Flask while BWL speedrun`,
-        ASSIGNED: `2020.06.08`,
-        DURATION: 15, // days
-        VALUE: 1.5, // multiplier to final GearScore
-      },
-      {
-        REASON: `Refused to go ZG speedrun at 2020.06.11`,
-        ASSIGNED: `2020.06.11`,
-        DURATION: 30, // days
-        VALUE: 1.5, // multiplier to final GearScore
-      },
-      {
-        REASON: `Used recklessness on vaelastrasz instead of firemaw during BWL speedrun 2020.07.08`,
-        ASSIGNED: `2020.06.11`,
-        DURATION: 30, // days
-        VALUE: 1.5, // multiplier to final GearScore
-      },
-    ],
-    GEAR: [{
-      NAME: `DTP`,
-      OBTAINED: `2020.03.25`,
-    },
-    {
-      NAME: `OG`,
-      OBTAINED: `2019.10.01`,
-    },
-    {
-      NAME: `WS`,
-      OBTAINED: `2019.10.01`,
-    },
-    {
-      NAME: `QSR`,
-      OBTAINED: `2020.04.27`,
-    },
-    {
-      NAME: `CAF`,
-      OBTAINED: `2020.04.08`,
-    },
-    {
-      NAME: `DB`,
-      OBTAINED: `2020.02.27`,
-    },
-    {
-      NAME: `PB`,
-      OBTAINED: `2019.10.01`,
-    },
-    {
-      NAME: `SM`,
-      OBTAINED: `2020.03.12`,
-    },
-    {
-      NAME: `LFC`,
-      OBTAINED: `2020.05.18`,
-    },
-    {
-      NAME: `BL`,
-      OBTAINED: `2020.06.01`,
-    },
-    {
-      NAME: `FG`,
-      OBTAINED: `2020.06.03`,
-    },
-    {
-      NAME: `DFT`,
-      OBTAINED: `2020.06.18`,
-    },
-    {
-      NAME: `BB`,
-      OBTAINED: `2019.10.01`,
-    },
-    {
-      NAME: `CB`,
-      OBTAINED: `2020.07.22`,
-    },
-    {
-      NAME: `IQA`,
-      OBTAINED: `2020.08.17`,
-    },
-    {
-      NAME: `LGW`,
-      OBTAINED: `2020.08.20`,
-    },
-    {
-      NAME: `CQL`,
-      OBTAINED: `2020.09.03`,
-    },
-    {
-      NAME: `BC`,
-      OBTAINED: `2020.09.23`,
-    },
-    {
-      NAME: `IQA`,
-      OBTAINED: `2020.09.23`,
-    },
-    ],
-    PERSONAL_MOD: 1.4, // based on warcraftlogs perfomance - the better you do the less coeff is
-  },
+  // Ilith: {
+  //   NAME: `Ilith`,
+  //   RANK: `Raider`,
+  //   NOTE: `Human, has Edgemasters, wants crul+cts/perd, wants CAF`,
+  //   PENALTIES: [
+  //     {
+  //       REASON: `No Flask while BWL speedrun`,
+  //       ASSIGNED: `2020.06.08`,
+  //       DURATION: 15, // days
+  //       VALUE: 1.5, // multiplier to final GearScore
+  //     },
+  //     {
+  //       REASON: `Refused to go ZG speedrun at 2020.06.11`,
+  //       ASSIGNED: `2020.06.11`,
+  //       DURATION: 30, // days
+  //       VALUE: 1.5, // multiplier to final GearScore
+  //     },
+  //     {
+  //       REASON: `Used recklessness on vaelastrasz instead of firemaw during BWL speedrun 2020.07.08`,
+  //       ASSIGNED: `2020.06.11`,
+  //       DURATION: 30, // days
+  //       VALUE: 1.5, // multiplier to final GearScore
+  //     },
+  //   ],
+  //   GEAR: [{
+  //     NAME: `DTP`,
+  //     OBTAINED: `2020.03.25`,
+  //   },
+  //   {
+  //     NAME: `OG`,
+  //     OBTAINED: `2019.10.01`,
+  //   },
+  //   {
+  //     NAME: `WS`,
+  //     OBTAINED: `2019.10.01`,
+  //   },
+  //   {
+  //     NAME: `QSR`,
+  //     OBTAINED: `2020.04.27`,
+  //   },
+  //   {
+  //     NAME: `CAF`,
+  //     OBTAINED: `2020.04.08`,
+  //   },
+  //   {
+  //     NAME: `DB`,
+  //     OBTAINED: `2020.02.27`,
+  //   },
+  //   {
+  //     NAME: `PB`,
+  //     OBTAINED: `2019.10.01`,
+  //   },
+  //   {
+  //     NAME: `SM`,
+  //     OBTAINED: `2020.03.12`,
+  //   },
+  //   {
+  //     NAME: `LFC`,
+  //     OBTAINED: `2020.05.18`,
+  //   },
+  //   {
+  //     NAME: `BL`,
+  //     OBTAINED: `2020.06.01`,
+  //   },
+  //   {
+  //     NAME: `FG`,
+  //     OBTAINED: `2020.06.03`,
+  //   },
+  //   {
+  //     NAME: `DFT`,
+  //     OBTAINED: `2020.06.18`,
+  //   },
+  //   {
+  //     NAME: `BB`,
+  //     OBTAINED: `2019.10.01`,
+  //   },
+  //   {
+  //     NAME: `CB`,
+  //     OBTAINED: `2020.07.22`,
+  //   },
+  //   {
+  //     NAME: `IQA`,
+  //     OBTAINED: `2020.08.17`,
+  //   },
+  //   {
+  //     NAME: `LGW`,
+  //     OBTAINED: `2020.08.20`,
+  //   },
+  //   {
+  //     NAME: `CQL`,
+  //     OBTAINED: `2020.09.03`,
+  //   },
+  //   {
+  //     NAME: `BC`,
+  //     OBTAINED: `2020.09.23`,
+  //   },
+  //   {
+  //     NAME: `IQA`,
+  //     OBTAINED: `2020.09.23`,
+  //   },
+  //   ],
+  //   PERSONAL_MOD: 1.4, // based on warcraftlogs perfomance - the better you do the less coeff is
+  // },
 
   Sveredom: {
     NAME: `Sveredom`,
@@ -984,88 +984,88 @@ const Warriors = {
   //   PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
   // },
 
-  Byratanks: {
-    NAME: `Byratanks`,
-    RANK: `Raider`,
-    NOTE: `Human`,
-    PENALTIES: [
-    ],
-    GEAR: [
-      {
-        NAME: `OG`,
-        OBTAINED: `2019.10.01`,
-      },
-      {
-        NAME: `WS`,
-        OBTAINED: `2019.10.01`,
-      },
-      {
-        NAME: `VIS`,
-        OBTAINED: `2019.10.01`,
-      },
-      {
-        NAME: `FG`,
-        OBTAINED: `2019.10.01`,
-      },
-      {
-        NAME: `CAF`,
-        OBTAINED: `2019.10.01`,
-      },
-      {
-        NAME: `BB`,
-        OBTAINED: `2020.07.20`,
-      },
-      {
-        NAME: `QSR`,
-        OBTAINED: `2020.07.20`,
-      },
-      {
-        NAME: `GA`,
-        OBTAINED: `2020.08.17`,
-      },
-      {
-        NAME: `CQS`,
-        OBTAINED: `2020.08.26`,
-      },
-      {
-        NAME: `CQL`,
-        OBTAINED: `2020.08.27`,
-      },
-      {
-        NAME: `LGW`,
-        OBTAINED: `2020.08.27`,
-      },
-      {
-        NAME: `BS`,
-        OBTAINED: `2020.09.02`,
-      },
-      {
-        NAME: `CTS`,
-        OBTAINED: `2020.09.07`,
-      },
-      {
-        NAME: `BC`,
-        OBTAINED: `2020.10.05`,
-      },
-      {
-        NAME: `CQB`,
-        OBTAINED: `2020.10.05`,
-      },
-      {
-        NAME: `CQC`,
-        OBTAINED: `2020.10.08`,
-      },
-      {
-        NAME: `CB`,
-        OBTAINED: `2020.10.12`,
-      },
-      {
-        NAME: `DFT`,
-        OBTAINED: `2020.10.12`,
-      },
-    ],
-    PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
-  },
+  // Byratanks: {
+  //   NAME: `Byratanks`,
+  //   RANK: `Raider`,
+  //   NOTE: `Human`,
+  //   PENALTIES: [
+  //   ],
+  //   GEAR: [
+  //     {
+  //       NAME: `OG`,
+  //       OBTAINED: `2019.10.01`,
+  //     },
+  //     {
+  //       NAME: `WS`,
+  //       OBTAINED: `2019.10.01`,
+  //     },
+  //     {
+  //       NAME: `VIS`,
+  //       OBTAINED: `2019.10.01`,
+  //     },
+  //     {
+  //       NAME: `FG`,
+  //       OBTAINED: `2019.10.01`,
+  //     },
+  //     {
+  //       NAME: `CAF`,
+  //       OBTAINED: `2019.10.01`,
+  //     },
+  //     {
+  //       NAME: `BB`,
+  //       OBTAINED: `2020.07.20`,
+  //     },
+  //     {
+  //       NAME: `QSR`,
+  //       OBTAINED: `2020.07.20`,
+  //     },
+  //     {
+  //       NAME: `GA`,
+  //       OBTAINED: `2020.08.17`,
+  //     },
+  //     {
+  //       NAME: `CQS`,
+  //       OBTAINED: `2020.08.26`,
+  //     },
+  //     {
+  //       NAME: `CQL`,
+  //       OBTAINED: `2020.08.27`,
+  //     },
+  //     {
+  //       NAME: `LGW`,
+  //       OBTAINED: `2020.08.27`,
+  //     },
+  //     {
+  //       NAME: `BS`,
+  //       OBTAINED: `2020.09.02`,
+  //     },
+  //     {
+  //       NAME: `CTS`,
+  //       OBTAINED: `2020.09.07`,
+  //     },
+  //     {
+  //       NAME: `BC`,
+  //       OBTAINED: `2020.10.05`,
+  //     },
+  //     {
+  //       NAME: `CQB`,
+  //       OBTAINED: `2020.10.05`,
+  //     },
+  //     {
+  //       NAME: `CQC`,
+  //       OBTAINED: `2020.10.08`,
+  //     },
+  //     {
+  //       NAME: `CB`,
+  //       OBTAINED: `2020.10.12`,
+  //     },
+  //     {
+  //       NAME: `DFT`,
+  //       OBTAINED: `2020.10.12`,
+  //     },
+  //   ],
+  //   PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
+  // },
 
   // Secara: {
   //   NAME: `Secara`,
@@ -1195,60 +1195,60 @@ const Warriors = {
     PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
   },
 
-  Honeydesire: {
-    NAME: `Honeydesire`,
-    RANK: `Raider`,
-    NOTE: `Human`,
-    PENALTIES: [
-    ],
-    GEAR: [
-      {
-        NAME: `RQF`,
-        OBTAINED: `2020.08.27`,
-      },
-      {
-        NAME: `CQS`,
-        OBTAINED: `2020.09.02`,
-      },
-      {
-        NAME: `GA`,
-        OBTAINED: `2020.09.02`,
-      },
-      {
-        NAME: `DTP`,
-        OBTAINED: `2019.10.01`,
-      },
-      {
-        NAME: `OG`,
-        OBTAINED: `2019.10.01`,
-      },
-      {
-        NAME: `WS`,
-        OBTAINED: `2019.10.01`,
-      },
-      {
-        NAME: `QSR`,
-        OBTAINED: `2019.10.01`,
-      },
-      {
-        NAME: `BFH`,
-        OBTAINED: `2020.08.26`,
-      },
-      {
-        NAME: `HDW`,
-        OBTAINED: `2020.09.17`,
-      },
-      {
-        NAME: `CQB`,
-        OBTAINED: `2020.10.15`,
-      },
-      {
-        NAME: `CQL`,
-        OBTAINED: `2020.10.21`,
-      },
-    ],
-    PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
-  },
+  // Honeydesire: {
+  //   NAME: `Honeydesire`,
+  //   RANK: `Raider`,
+  //   NOTE: `Human`,
+  //   PENALTIES: [
+  //   ],
+  //   GEAR: [
+  //     {
+  //       NAME: `RQF`,
+  //       OBTAINED: `2020.08.27`,
+  //     },
+  //     {
+  //       NAME: `CQS`,
+  //       OBTAINED: `2020.09.02`,
+  //     },
+  //     {
+  //       NAME: `GA`,
+  //       OBTAINED: `2020.09.02`,
+  //     },
+  //     {
+  //       NAME: `DTP`,
+  //       OBTAINED: `2019.10.01`,
+  //     },
+  //     {
+  //       NAME: `OG`,
+  //       OBTAINED: `2019.10.01`,
+  //     },
+  //     {
+  //       NAME: `WS`,
+  //       OBTAINED: `2019.10.01`,
+  //     },
+  //     {
+  //       NAME: `QSR`,
+  //       OBTAINED: `2019.10.01`,
+  //     },
+  //     {
+  //       NAME: `BFH`,
+  //       OBTAINED: `2020.08.26`,
+  //     },
+  //     {
+  //       NAME: `HDW`,
+  //       OBTAINED: `2020.09.17`,
+  //     },
+  //     {
+  //       NAME: `CQB`,
+  //       OBTAINED: `2020.10.15`,
+  //     },
+  //     {
+  //       NAME: `CQL`,
+  //       OBTAINED: `2020.10.21`,
+  //     },
+  //   ],
+  //   PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
+  // },
 
   // Rets: {
   //   NAME: `Rets`,
@@ -1395,33 +1395,33 @@ const Warriors = {
     PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
   },
 
-  Luniz: {
-    NAME: `Luniz`,
-    RANK: `Trial`,
-    NOTE: `Human`,
-    PENALTIES: [
-    ],
-    GEAR: [
-
-      {
-        NAME: `MALA`,
-        OBTAINED: `2020.09.07`,
-      },
-      {
-        NAME: `CQS`,
-        OBTAINED: `2020.09.14`,
-      },
-      {
-        NAME: `CQC`,
-        OBTAINED: `2020.09.14`,
-      },
-      {
-        NAME: `CQB`,
-        OBTAINED: `2020.09.17`,
-      },
-    ],
-    PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
-  },
+  // Luniz: {
+  //   NAME: `Luniz`,
+  //   RANK: `Trial`,
+  //   NOTE: `Human`,
+  //   PENALTIES: [
+  //   ],
+  //   GEAR: [
+  //
+  //     {
+  //       NAME: `MALA`,
+  //       OBTAINED: `2020.09.07`,
+  //     },
+  //     {
+  //       NAME: `CQS`,
+  //       OBTAINED: `2020.09.14`,
+  //     },
+  //     {
+  //       NAME: `CQC`,
+  //       OBTAINED: `2020.09.14`,
+  //     },
+  //     {
+  //       NAME: `CQB`,
+  //       OBTAINED: `2020.09.17`,
+  //     },
+  //   ],
+  //   PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
+  // },
 
   // Sothatmeans: {
   //   NAME: `Sothatmeans`,
@@ -1459,57 +1459,57 @@ const Warriors = {
   //   PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
   // },
 
-  Kenux: {
-    NAME: `Kenux`,
-    RANK: `Trial`,
-    NOTE: `Human`,
-    PENALTIES: [
-    ],
-    GEAR: [
-
-      {
-        NAME: `DTP`,
-        OBTAINED: `2019.10.01`,
-      },
-      {
-        NAME: `MALA`,
-        OBTAINED: `2019.10.01`,
-      },
-      {
-        NAME: `OG`,
-        OBTAINED: `2019.10.01`,
-      },
-      {
-        NAME: `CB`,
-        OBTAINED: `2019.10.01`,
-      },
-      {
-        NAME: `FG`,
-        OBTAINED: `2019.10.01`,
-      },
-      {
-        NAME: `QSR`,
-        OBTAINED: `2019.10.01`,
-      },
-      {
-        NAME: `CQS`,
-        OBTAINED: `2019.10.01`,
-      },
-      {
-        NAME: `CQB`,
-        OBTAINED: `2020.10.14`,
-      },
-      {
-        NAME: `CQL`,
-        OBTAINED: `2020.10.14`,
-      },
-      {
-        NAME: `HDW`,
-        OBTAINED: `2020.10.29`,
-      },
-    ],
-    PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
-  },
+  // Kenux: {
+  //   NAME: `Kenux`,
+  //   RANK: `Trial`,
+  //   NOTE: `Human`,
+  //   PENALTIES: [
+  //   ],
+  //   GEAR: [
+  //
+  //     {
+  //       NAME: `DTP`,
+  //       OBTAINED: `2019.10.01`,
+  //     },
+  //     {
+  //       NAME: `MALA`,
+  //       OBTAINED: `2019.10.01`,
+  //     },
+  //     {
+  //       NAME: `OG`,
+  //       OBTAINED: `2019.10.01`,
+  //     },
+  //     {
+  //       NAME: `CB`,
+  //       OBTAINED: `2019.10.01`,
+  //     },
+  //     {
+  //       NAME: `FG`,
+  //       OBTAINED: `2019.10.01`,
+  //     },
+  //     {
+  //       NAME: `QSR`,
+  //       OBTAINED: `2019.10.01`,
+  //     },
+  //     {
+  //       NAME: `CQS`,
+  //       OBTAINED: `2019.10.01`,
+  //     },
+  //     {
+  //       NAME: `CQB`,
+  //       OBTAINED: `2020.10.14`,
+  //     },
+  //     {
+  //       NAME: `CQL`,
+  //       OBTAINED: `2020.10.14`,
+  //     },
+  //     {
+  //       NAME: `HDW`,
+  //       OBTAINED: `2020.10.29`,
+  //     },
+  //   ],
+  //   PERSONAL_MOD: 1, // based on warcraftlogs perfomance - the better you do the less coeff is
+  // },
 
   Darthdumle: {
     NAME: `Darthdumle`,
